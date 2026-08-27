@@ -7,6 +7,7 @@ import { DynamicPhaseIndicator } from './components/DynamicPhaseIndicator';
 import { DynamicSection } from './components/DynamicSection';
 import { InteractiveTroubleshooter } from './components/InteractiveTroubleshooter';
 import { SeerCalculator } from './components/SeerCalculator';
+import { GoHighLevelModal } from './components/GoHighLevelModal';
 import { Sparkles } from 'lucide-react';
 
 export const LEAD_CONNECTOR_FUNNEL_URL = "https://sites.leadconnectorhq.com/preview/zWn9C136Lu8hSN8Y1Vi8?notrack=true";

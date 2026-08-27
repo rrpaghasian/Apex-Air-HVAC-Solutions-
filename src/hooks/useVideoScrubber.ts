@@ -42,6 +42,8 @@ export function useVideoScrubber(options: UseVideoScrubberOptions = {}) {
       setIsReady(true);
       if (prefersReducedMotion) {
         video.currentTime = 0;
+      } else if (video.currentTime === 0 && video.duration) {
+        video.currentTime = 0.001;
       }
     };
 

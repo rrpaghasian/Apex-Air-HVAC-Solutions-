@@ -6,18 +6,12 @@ interface DynamicBackgroundVideoProps {
 
 export const DynamicBackgroundVideo: React.FC<DynamicBackgroundVideoProps> = ({ videoRef }) => {
   return (
-    <div 
-      className="fixed inset-0 w-full h-full -z-10 overflow-hidden bg-slate-950 pointer-events-none bg-cover bg-center"
-      style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=80')`
-      }}
-    >
+    <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden bg-neutral-950 pointer-events-none">
       <video
         ref={videoRef}
         muted
         playsInline
         preload="auto"
-        poster="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=80"
         className="w-full h-full object-cover"
         style={{ objectFit: 'cover' }}
       >
@@ -28,7 +22,7 @@ export const DynamicBackgroundVideo: React.FC<DynamicBackgroundVideoProps> = ({ 
       </video>
 
       {/* Ambient cinematic gradient overlay for contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/75 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/70 pointer-events-none" />
     </div>
   );
 };

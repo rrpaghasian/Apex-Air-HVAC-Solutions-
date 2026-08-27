@@ -129,7 +129,13 @@ export function useServerTelemetry(scrollProgress: number) {
 
   useEffect(() => {
     fetch('/api/content')
-      .then((res) => (res.ok ? res.json() : null))
+      .then((res) => {
+        const contentType = res.headers.get("content-type");
+        if (res.ok && contentType && contentType.includes("application/json")) {
+          return res.json();
+        }
+        return null;
+      })
       .then((data) => {
         if (data && data.sections) {
           setContent(data);

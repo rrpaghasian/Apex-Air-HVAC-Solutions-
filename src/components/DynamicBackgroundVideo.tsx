@@ -15,9 +15,7 @@ export const DynamicBackgroundVideo: React.FC<DynamicBackgroundVideoProps> = ({ 
         className="w-full h-full object-cover"
         style={{ objectFit: 'cover' }}
       >
-        {/* Dynamic server-side byte-range stream */}
-        <source src="/api/stream/video" type="video/mp4" />
-        {/* Local static fallback */}
+        {/* Primary static video file served from public/ */}
         <source src="/video_1_reversed.mp4" type="video/mp4" />
         {/* Direct CDN fallback */}
         <source src="https://dl.dropboxusercontent.com/scl/fi/36poffkevs1mggew52f03/video_1_reversed.mp4?rlkey=yk7nqitc61hq39uyjcbw4g0m2&st=w8bjjtlo&dl=1" type="video/mp4" />

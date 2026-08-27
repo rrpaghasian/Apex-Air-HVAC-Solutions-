@@ -112,17 +112,17 @@ export const DynamicSection: React.FC<DynamicSectionProps> = ({
       {section.servicePills && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-3xl mx-auto pt-2 text-left">
           {section.servicePills.map((pill, i) => (
-            <div
+            <a
               key={i}
-              onClick={() => onOpenBooking(pill.actionCode === 'install' ? 'SEER500' : 'REBATE25')}
-              className="group p-3.5 rounded-xl bg-black/50 border border-neutral-700/60 hover:border-cyan-400/80 backdrop-blur-md transition-all hover:-translate-y-0.5 cursor-pointer shadow-lg"
+              href="https://sites.leadconnectorhq.com/preview/zWn9C136Lu8hSN8Y1Vi8?notrack=true"
+              className="group p-3.5 rounded-xl bg-black/50 border border-neutral-700/60 hover:border-cyan-400/80 backdrop-blur-md transition-all hover:-translate-y-0.5 cursor-pointer shadow-lg no-underline block"
             >
               <div className="flex items-center justify-between gap-1 pb-1.5">
                 <span className="text-xs font-bold text-white group-hover:text-cyan-300 transition-colors">{pill.title}</span>
                 <span className="text-[10px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-1.5 py-0.5 rounded font-mono font-semibold">{pill.badge}</span>
               </div>
               <p className="text-[11px] text-neutral-400 leading-snug">{pill.desc}</p>
-            </div>
+            </a>
           ))}
         </div>
       )}
@@ -130,13 +130,13 @@ export const DynamicSection: React.FC<DynamicSectionProps> = ({
       {/* High-Converting Action Buttons */}
       <div className="flex flex-wrap justify-center items-center gap-3 pt-3">
         {section.primaryCta && (
-          <button
-            onClick={handlePrimaryClick}
-            className="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-xl shadow-orange-500/30 transition-all flex items-center gap-2 cursor-pointer group"
+          <a
+            href="https://sites.leadconnectorhq.com/preview/zWn9C136Lu8hSN8Y1Vi8?notrack=true"
+            className="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-xl shadow-orange-500/30 transition-all flex items-center gap-2 cursor-pointer group no-underline"
           >
             <span>{section.primaryCta.label}</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         )}
 
         {section.secondaryCta && (

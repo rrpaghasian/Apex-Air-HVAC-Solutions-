@@ -41,7 +41,7 @@ export const DynamicHeader: React.FC<DynamicHeaderProps> = ({ brand, telemetry, 
         </div>
       </div>
 
-      {/* Header Actions: Phone & Get Started CTA */}
+      {/* Header Actions: Phone & Direct Get Started CTA */}
       <div className="flex items-center gap-3">
         <a
           href={`tel:${brand.phoneRaw}`}
@@ -51,13 +51,13 @@ export const DynamicHeader: React.FC<DynamicHeaderProps> = ({ brand, telemetry, 
           <span>{brand.phone}</span>
         </a>
 
-        <button
-          onClick={onGetStarted}
-          className="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg shadow-lg shadow-orange-500/25 transition-all flex items-center gap-2 cursor-pointer group"
+        <a
+          href="https://sites.leadconnectorhq.com/preview/zWn9C136Lu8hSN8Y1Vi8?notrack=true"
+          className="bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg shadow-lg shadow-orange-500/25 transition-all flex items-center gap-2 cursor-pointer group no-underline"
         >
           <span>Get Started</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-        </button>
+        </a>
       </div>
     </header>
   );

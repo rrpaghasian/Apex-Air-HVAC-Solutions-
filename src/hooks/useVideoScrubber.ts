@@ -37,7 +37,7 @@ export function useVideoScrubber(options: UseVideoScrubberOptions = {}) {
     let lastTime = performance.now();
     let animationFrameId: number;
 
-    const handleMetadata = () => {
+    const handleReady = () => {
       video.pause();
       setIsReady(true);
       if (prefersReducedMotion) {
@@ -45,7 +45,9 @@ export function useVideoScrubber(options: UseVideoScrubberOptions = {}) {
       }
     };
 
-    video.addEventListener('loadedmetadata', handleMetadata);
+    video.addEventListener('loadedmetadata', handleReady);
+    video.addEventListener('loadeddata', handleReady);
+    video.addEventListener('canplay', handleReady);
 
     const renderLoop = (now: number) => {
       const dt = Math.min((now - lastTime) / 1000, 0.1);
@@ -87,7 +89,9 @@ export function useVideoScrubber(options: UseVideoScrubberOptions = {}) {
     return () => {
       cancelAnimationFrame(animationFrameId);
       mediaQuery.removeEventListener('change', handleMotionChange);
-      video.removeEventListener('loadedmetadata', handleMetadata);
+      video.removeEventListener('loadedmetadata', handleReady);
+      video.removeEventListener('loadeddata', handleReady);
+      video.removeEventListener('canplay', handleReady);
     };
   }, [smoothingFactor]);
 

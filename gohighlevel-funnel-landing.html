@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Apex Air Solutions | High-Converting HVAC Sales Funnel</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       APEX AIR SOLUTIONS - GOHIGHLEVEL HIGH-CONVERTING SALES FUNNEL STYLES
+       ========================================================================== */
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --accent: #f97316;
+      --accent-hover: #ea580c;
+      --accent-light: #ffedd5;
+      --dark: #0f172a;
+      --dark-800: #1e293b;
+      --dark-850: #182234;
+      --dark-900: #0f172a;
+      --dark-950: #090d16;
+      --emerald: #10b981;
+      --emerald-dark: #059669;
+      --emerald-light: #d1fae5;
+      --amber: #f59e0b;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: var(--dark);
+      line-height: 1.5;
+      overflow-x: hidden;
+      padding-bottom: 74px;
+      font-family: var(--font);
+    }
+
+    @media (min-width: 769px) {
+      body { padding-bottom: 0; }
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font-family: inherit; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    @media (min-width: 768px) {
+      .container { padding: 0 24px; }
+    }
+
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .items-center { align-items: center; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .flex-col { flex-direction: column; }
+    .flex-wrap { flex-wrap: wrap; }
+    .gap-1 { gap: 4px; }
+    .gap-2 { gap: 8px; }
+    .gap-3 { gap: 12px; }
+    .gap-4 { gap: 16px; }
+    .gap-6 { gap: 24px; }
+    .gap-8 { gap: 32px; }
+    .w-full { width: 100%; }
+    .text-center { text-align: center; }
+    .relative { position: relative; }
+    .overflow-hidden { overflow: hidden; }
+
+    /* Button Styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 800;
+      border-radius: var(--radius-md);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .btn-orange {
+      background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+    }
+    .btn-orange:hover {
+      background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%);
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .btn-cyan {
+      background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+    }
+    .btn-cyan:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-white {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff !important;
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+    }
+    .btn-outline-white:hover {
+      background: #ffffff;
+      color: var(--dark) !important;
+      border-color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .btn-sm { padding: 8px 16px; font-size: 0.875rem; }
+    .btn-md { padding: 12px 24px; font-size: 1rem; }
+    .btn-lg { padding: 16px 32px; font-size: 1.125rem; letter-spacing: -0.01em; border-radius: var(--radius-lg); }
+
+    /* Pulse animation */
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.15); }
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #ef4444;
+      display: inline-block;
+      animation: pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    /* 1. Urgent Top Bar */
+    .top-bar {
+      background: var(--dark-950);
+      color: var(--gray-300);
+      font-size: 0.8125rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 8px 0;
+    }
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .top-badge {
+      background: #dc2626;
+      color: #fff;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* 2. Funnel Focused Header */
+    .funnel-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    .funnel-header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #0284c7, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.35rem;
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+    }
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+      line-height: 1.1;
+    }
+    .logo-text span { color: var(--primary); }
+    .logo-sub {
+      font-size: 0.6875rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+    .header-trust {
+      display: none;
+      align-items: center;
+      gap: 16px;
+    }
+    @media (min-width: 900px) {
+      .header-trust { display: flex; }
+    }
+    .header-stars {
+      color: var(--amber);
+      font-size: 0.875rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .phone-link-header {
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .phone-link-header:hover { color: var(--primary); }
+
+    /* 3. Hero Section */
+    .funnel-hero {
+      position: relative;
+      background: linear-gradient(180deg, #090d16 0%, #0f172a 100%);
+      color: #ffffff;
+      padding: 48px 0 60px 0;
+      overflow: hidden;
+    }
+    @media (min-width: 768px) {
+      .funnel-hero { padding: 64px 0 80px 0; }
+    }
+    .hero-glow {
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.25) 0%, rgba(0,0,0,0) 70%);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+    .hero-glow-2 {
+      position: absolute;
+      bottom: -20%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.18) 0%, rgba(0,0,0,0) 70%);
+      filter: blur(50px);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    @media (min-width: 992px) {
+      .hero-grid { grid-template-columns: 1.15fr 0.85fr; }
+    }
+    .hero-urgency-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(249, 115, 22, 0.15);
+      border: 1px solid rgba(249, 115, 22, 0.4);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.8125rem;
+      font-weight: 800;
+      color: #fdba74;
+      margin-bottom: 20px;
+    }
+    .hero-h1 {
+      font-size: 2.25rem;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    @media (min-width: 768px) {
+      .hero-h1 { font-size: 3.15rem; }
+    }
+    .hero-h1 span.highlight {
+      background: linear-gradient(135deg, #38bdf8, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      font-size: 1.0625rem;
+      color: var(--gray-300);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .hero-offer-box {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.15), rgba(249, 115, 22, 0.12));
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .offer-badge {
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+    .offer-text {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    .offer-text strong {
+      color: #38bdf8;
+      font-weight: 800;
+    }
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    @media (min-width: 480px) {
+      .hero-cta-group { flex-direction: row; align-items: center; }
+    }
+    .hero-trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 20px;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--gray-300);
+    }
+    .trust-item .check {
+      color: var(--emerald);
+      font-weight: 900;
+    }
+
+    /* Hero Right Card (Lead Magnet Box) */
+    .hero-lead-card {
+      background: #ffffff;
+      color: var(--dark);
+      border-radius: var(--radius-xl);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-2xl);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+    }
+    .lead-card-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .lead-card-tag {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      margin-bottom: 8px;
+    }
+    .lead-card-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--dark);
+    }
+    .lead-card-sub {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      margin-top: 4px;
+    }
+    .voucher-preview-box {
+      background: #fff8f0;
+      border: 2px dashed #f97316;
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .voucher-val {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ea580c;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .voucher-title {
+      font-size: 0.875rem;
+      font-weight: 800;
+      color: var(--dark);
+    }
+    .voucher-code {
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid #fed7aa;
+      color: #9a3412;
+      font-family: monospace;
+      font-weight: 800;
+      font-size: 0.875rem;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+    .card-benefits-list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+    .card-benefits-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--gray-700);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .card-benefits-list li span.icon {
+      color: var(--emerald);
+      font-weight: 900;
+    }
+
+    /* 4. Social Proof Badges Strip */
+    .proof-strip {
+      background: #f8fafc;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 24px 0;
+    }
+    .proof-grid {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .proof-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .proof-icon {
+      font-size: 1.5rem;
+    }
+    .proof-title {
+      font-size: 0.875rem;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+    .proof-sub {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+
+    /* 5. Section Headers */
+    .section-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 48px auto;
+    }
+    .section-pill {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 1.875rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    @media (min-width: 768px) {
+      .section-title { font-size: 2.25rem; }
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--gray-600);
+    }
+
+    /* 6. Interactive Dual Widget Section */
+    .widgets-section {
+      padding: 64px 0;
+      background: #f1f5f9;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .widgets-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    @media (min-width: 992px) {
+      .widgets-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .widget-box {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .widget-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .widget-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+    .widget-icon.blue { background: #e0f2fe; color: #0284c7; }
+    .widget-icon.green { background: #d1fae5; color: #10b981; }
+    .widget-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--dark);
+    }
+    .widget-sub {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+    }
+
+    /* Trouble system toggle */
+    .trouble-toggle {
+      display: flex;
+      background: var(--gray-100);
+      padding: 4px;
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+    }
+    .trouble-toggle button {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      background: transparent;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .trouble-toggle button.active {
+      background: #ffffff;
+      color: var(--dark);
+      box-shadow: var(--shadow-sm);
+    }
+    .symptom-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .symptom-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .symptom-item:hover, .symptom-item.active {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary-dark);
+    }
+    .symptom-badge {
+      font-size: 0.6875rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: #e2e8f0;
+      color: #475569;
+    }
+    .diag-result-card {
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      padding: 14px 16px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin-bottom: 20px;
+    }
+    .diag-title {
+      font-size: 0.9375rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .diag-text {
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+      margin-bottom: 8px;
+    }
+    .diag-est {
+      font-size: 0.8125rem;
+      font-weight: 800;
+      color: var(--emerald-dark);
+    }
+
+    /* SEER Slider styles */
+    .seer-control-box {
+      background: var(--gray-50);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .seer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
+    .seer-counter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .seer-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--gray-300);
+      background: #fff;
+      font-weight: 900;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .seer-btn:hover { background: var(--gray-100); }
+    .seer-val {
+      font-size: 1.125rem;
+      font-weight: 900;
+      color: var(--primary);
+      min-width: 30px;
+      text-align: center;
+    }
+    .savings-display-box {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border: 2px solid #a7f3d0;
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .savings-num {
+      font-size: 2.25rem;
+      font-weight: 900;
+      color: #065f46;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .savings-lbl {
+      font-size: 0.8125rem;
+      font-weight: 800;
+      color: #047857;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+    }
+
+    /* 7. 3 High Value Coupon Cards */
+    .coupons-section {
+      padding: 64px 0;
+      background: #ffffff;
+    }
+    .coupons-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .coupons-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .coupon-card {
+      border: 2px dashed #cbd5e1;
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      transition: all 0.25s;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+    .coupon-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    .coupon-card.featured {
+      border-color: var(--accent);
+      background: linear-gradient(180deg, #fffaf5 0%, #ffffff 100%);
+      box-shadow: var(--shadow-md);
+    }
+    .coupon-tag {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.6875rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      letter-spacing: 0.04em;
+    }
+    .coupon-amount {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #ea580c;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin: 12px 0 6px 0;
+    }
+    .coupon-heading {
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .coupon-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .coupon-code-pill {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-300);
+      padding: 6px 12px;
+      border-radius: var(--radius-md);
+      font-family: monospace;
+      font-size: 0.875rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    /* 8. Comparison Table (Value Stack) */
+    .comparison-section {
+      padding: 64px 0;
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .comp-table-wrap {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .comp-table th, .comp-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--gray-200);
+      font-size: 0.9375rem;
+    }
+    .comp-table th {
+      font-weight: 900;
+      background: #f8fafc;
+      color: var(--dark);
+    }
+    .comp-table th.highlight-col {
+      background: #0284c7;
+      color: #ffffff;
+      text-align: center;
+    }
+    .comp-table td.highlight-col {
+      background: #f0f9ff;
+      font-weight: 700;
+      color: #0369a1;
+      text-align: center;
+    }
+    .comp-table td.other-col {
+      text-align: center;
+      color: var(--gray-500);
+    }
+
+    /* 9. Core Services Grid */
+    .services-section {
+      padding: 64px 0;
+      background: #ffffff;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .service-box {
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-box:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-4px);
+      border-color: var(--primary);
+    }
+    .service-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .service-content {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .service-desc {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .service-features {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    .service-features li {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .service-features li span { color: var(--emerald); font-weight: 900; }
+
+    /* 10. Reviews & Testimonials Carousel */
+    .reviews-section {
+      padding: 64px 0;
+      background: var(--dark-900);
+      color: #ffffff;
+    }
+    .review-card-featured {
+      background: var(--dark-800);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-xl);
+      padding: 36px 32px;
+      max-width: 800px;
+      margin: 0 auto 32px auto;
+      text-align: center;
+      box-shadow: var(--shadow-2xl);
+    }
+    .review-stars {
+      color: var(--amber);
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+    }
+    .review-quote {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      font-weight: 500;
+      color: var(--gray-100);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .review-author {
+      font-weight: 800;
+      font-size: 1rem;
+      color: #ffffff;
+    }
+    .review-meta {
+      font-size: 0.8125rem;
+      color: var(--gray-400);
+      margin-top: 4px;
+    }
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+    .carousel-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--dark-800);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      font-size: 1.125rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .carousel-btn:hover { background: var(--primary); border-color: var(--primary); }
+
+    /* 11. Transparent Pricing Tiers */
+    .pricing-section {
+      padding: 64px 0;
+      background: #ffffff;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .price-card {
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 32px 24px;
+      text-align: center;
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s;
+    }
+    .price-card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-4px);
+    }
+    .price-card.popular {
+      border: 2px solid var(--primary);
+      position: relative;
+      box-shadow: var(--shadow-md);
+      background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
+    }
+    .price-tag-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.6875rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+    }
+    .price-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .price-cost {
+      font-size: 2.75rem;
+      font-weight: 900;
+      color: var(--dark);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin: 12px 0 4px 0;
+    }
+    .price-cost span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gray-500);
+    }
+    .price-features-list {
+      list-style: none;
+      text-align: left;
+      margin: 24px 0;
+    }
+    .price-features-list li {
+      font-size: 0.875rem;
+      color: var(--gray-700);
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .price-features-list li span { color: var(--emerald); font-weight: 900; }
+
+    /* 12. FAQ Section */
+    .faq-section {
+      padding: 64px 0;
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+    }
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-question {
+      padding: 18px 24px;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question:hover { color: var(--primary); }
+    .faq-arrow {
+      font-size: 1.25rem;
+      transition: transform 0.2s;
+    }
+    .faq-answer {
+      padding: 0 24px 20px 24px;
+      font-size: 0.9375rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+      display: none;
+    }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+    /* 13. Final Urgency Banner */
+    .final-cta-section {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .final-cta-title {
+      font-size: 2.25rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+    .final-cta-sub {
+      font-size: 1.0625rem;
+      color: #e0f2fe;
+      max-width: 600px;
+      margin: 0 auto 28px auto;
+    }
+    .final-btn-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* 14. Footer */
+    .funnel-footer {
+      background: var(--dark-950);
+      color: var(--gray-400);
+      padding: 40px 0 24px 0;
+      font-size: 0.8125rem;
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-links a:hover { color: #ffffff; }
+
+    /* 15. Sticky Mobile Conversion Bar */
+    .mobile-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      border-top: 1px solid var(--gray-200);
+      padding: 10px 16px;
+      display: flex;
+      gap: 10px;
+      z-index: 999;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    }
+    @media (min-width: 769px) {
+      .mobile-bar { display: none; }
+    }
+    .mobile-bar .btn { flex: 1; padding: 12px 8px; font-size: 0.875rem; }
+
+    /* GoHighLevel Fallback Preview Modal (For direct browser testing) */
+    .ghl-demo-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(4px);
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .ghl-demo-modal.open { display: flex; }
+    .ghl-demo-modal-content {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      max-width: 520px;
+      width: 100%;
+      padding: 32px;
+      text-align: center;
+      position: relative;
+      box-shadow: var(--shadow-2xl);
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--gray-100);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-weight: 900;
+      color: var(--gray-600);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Urgent Top Notification Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="flex items-center gap-2">
+          <span class="top-badge">
+            <span class="pulse-dot"></span> LIVE DISPATCH
+          </span>
+          <span>Technicians on call in <strong>Buford, Flowery Branch, Gainesville &amp; North GA</strong></span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span>24/7 Emergency Line:</span>
+          <a href="tel:7709677910" style="color: #ffffff; font-weight: 800;">(770) 967-7910</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Clean Funnel Navigation (High-Converting, No Outbound Distractions) -->
+  <header class="funnel-header">
+    <div class="container">
+      <div class="funnel-header-inner">
+        <div class="logo-box">
+          <div class="logo-icon">❄️</div>
+          <div>
+            <div class="logo-text">APEX<span>AIR</span></div>
+            <div class="logo-sub">Heating &amp; Air Solutions</div>
+          </div>
+        </div>
+
+        <div class="header-trust">
+          <div class="header-stars">⭐⭐⭐⭐⭐ 4.9 (380+ Reviews)</div>
+          <span style="color: var(--gray-300);">|</span>
+          <span style="font-size: 0.8125rem; font-weight: 700; color: var(--gray-600);">GA Lic #HVAC-98231</span>
+        </div>
+
+        <div class="header-actions">
+          <a href="tel:7709677910" class="phone-link-header">
+            <span>📞</span> <span class="hidden sm:inline">(770) 967-7910</span>
+          </a>
+          <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-orange btn-sm">
+            🎁 Claim $25 Off
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Direct-Response Hero Section with Dual CTAs -->
+  <section class="funnel-hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Left Column -->
+        <div>
+          <div class="hero-urgency-pill">
+            <span>⚡ FAST 60-MINUTE EMERGENCY DISPATCH AVAILABLE</span>
+          </div>
+          <h1 class="hero-h1">
+            Fast, Honest Heating &amp; AC Repair in <span class="highlight">Buford &amp; North Georgia</span>
+          </h1>
+          <p class="hero-desc">
+            Don't suffer in unbearable heat or freezing cold. Our NATE-certified technicians arrive fully stocked to fix 95% of HVAC issues on the very first visit with upfront, flat-rate pricing.
+          </p>
+
+          <!-- High-Value Offer Callout -->
+          <div class="hero-offer-box">
+            <span class="offer-badge">SPECIAL VOUCHER</span>
+            <div class="offer-text">
+              Claim <strong>$25 OFF</strong> Any Service Call or <strong>$500 OFF</strong> New High-Efficiency SEER2 System Replacements!
+            </div>
+          </div>
+
+          <!-- Direct CTAs (Trigger GoHighLevel Pop-Up) -->
+          <div class="hero-cta-group">
+            <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-orange btn-lg">
+              🎁 Claim Your $25 Voucher
+            </a>
+            <a href="tel:7709677910" class="btn btn-outline-white btn-lg">
+              📞 Call (770) 967-7910
+            </a>
+          </div>
+
+          <!-- Trust Badges Under CTAs -->
+          <div class="hero-trust-row">
+            <div class="trust-item"><span class="check">✓</span> 100% Satisfaction Guarantee</div>
+            <div class="trust-item"><span class="check">✓</span> Zero Hidden Overtime Fees</div>
+            <div class="trust-item"><span class="check">✓</span> NATE-Certified &amp; Insured</div>
+            <div class="trust-item"><span class="check">✓</span> Upfront Written Pricing</div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: High-Converting Voucher Teaser Card -->
+        <div>
+          <div class="hero-lead-card">
+            <div class="lead-card-header">
+              <span class="lead-card-tag">Instant Homeowner Benefit</span>
+              <h2 class="lead-card-title">Priority HVAC Service Pass</h2>
+              <p class="lead-card-sub">Reserve your diagnostic slot &amp; apply instant savings</p>
+            </div>
+
+            <div class="voucher-preview-box">
+              <div class="voucher-val">$25.00 OFF</div>
+              <div class="voucher-title">Any AC / Heating Repair or Diagnostic</div>
+              <div class="voucher-code">PROMO CODE: REBATE25</div>
+            </div>
+
+            <ul class="card-benefits-list">
+              <li><span class="icon">✓</span> <strong>Same-Day Priority Scheduling</strong> with live ETA alerts</li>
+              <li><span class="icon">✓</span> <strong>21-Point Safety &amp; Electrical Inspection</strong> included</li>
+              <li><span class="icon">✓</span> <strong>Fixed-Right Warranty</strong> on all replacement parts</li>
+            </ul>
+
+            <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-cyan btn-lg w-full">
+              🚀 Claim Voucher &amp; Schedule Slot
+            </a>
+            <p style="font-size: 0.75rem; color: var(--gray-500); text-align: center; margin-top: 8px;">
+              🔒 Zero Obligation • Free Phone Consultation
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Trust Proof Strip -->
+  <section class="proof-strip">
+    <div class="container">
+      <div class="proof-grid">
+        <div class="proof-badge">
+          <span class="proof-icon">⭐</span>
+          <div>
+            <div class="proof-title">4.9 / 5.0 Rating</div>
+            <div class="proof-sub">380+ Verified Reviews</div>
+          </div>
+        </div>
+        <div class="proof-badge">
+          <span class="proof-icon">🏆</span>
+          <div>
+            <div class="proof-title">NATE Certified</div>
+            <div class="proof-sub">Master HVAC Specialists</div>
+          </div>
+        </div>
+        <div class="proof-badge">
+          <span class="proof-icon">🛡️</span>
+          <div>
+            <div class="proof-title">Licensed &amp; Insured</div>
+            <div class="proof-sub">State Lic #HVAC-98231</div>
+          </div>
+        </div>
+        <div class="proof-badge">
+          <span class="proof-icon">⏱️</span>
+          <div>
+            <div class="proof-title">60-Min Emergency</div>
+            <div class="proof-sub">Rapid Dispatch Available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Dual Interactive Lead Generators: Symptom Wizard & SEER Savings Calculator -->
+  <section class="widgets-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pill">Interactive Diagnostic &amp; Savings</span>
+        <h2 class="section-title">Diagnose Your System or Estimate Your Energy Savings</h2>
+        <p class="section-sub">Select your symptoms or see how much you could save on your power bill with high-efficiency SEER2 upgrades.</p>
+      </div>
+
+      <div class="widgets-grid">
+        <!-- Widget 1: Troubleshooting Symptom Selector -->
+        <div class="widget-box">
+          <div>
+            <div class="widget-header">
+              <div class="widget-icon blue">🔧</div>
+              <div>
+                <div class="widget-title">HVAC Diagnostic Assistant</div>
+                <div class="widget-sub">Select your issue for probable causes &amp; estimated cost</div>
+              </div>
+            </div>
+
+            <!-- AC vs Heat toggle -->
+            <div class="trouble-toggle">
+              <button id="btn-funnel-ac" class="active" onclick="setFunnelSystem('ac')">❄️ Air Conditioning</button>
+              <button id="btn-funnel-heat" onclick="setFunnelSystem('heat')">🔥 Heating / Furnace</button>
+            </div>
+
+            <!-- Symptom List -->
+            <div id="funnel-symptom-container" class="symptom-list">
+              <!-- Dynamically populated via JS -->
+            </div>
+
+            <!-- Diagnostic Card Result -->
+            <div class="diag-result-card">
+              <div id="funnel-diag-title" class="diag-title">Blowing Warm / Room-Temperature Air</div>
+              <div id="funnel-diag-cause" class="diag-text">Commonly caused by a failed capacitor, low refrigerant (leak), or tripped outdoor breaker.</div>
+              <div id="funnel-diag-est" class="diag-est">Estimated Repair: $120 - $280 • Quick 1-Visit Fix</div>
+            </div>
+          </div>
+
+          <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-orange btn-md w-full">
+            🎁 Apply $25 Voucher to this Diagnostic
+          </a>
+        </div>
+
+        <!-- Widget 2: SEER2 Energy Savings Calculator -->
+        <div class="widget-box">
+          <div>
+            <div class="widget-header">
+              <div class="widget-icon green">💡</div>
+              <div>
+                <div class="widget-title">SEER2 Energy Savings Estimator</div>
+                <div class="widget-sub">Calculate 5-year utility bill savings &amp; rebates</div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="seer-control-box">
+              <div class="seer-row">
+                <span>Current Unit SEER (Older Unit):</span>
+                <div class="seer-counter">
+                  <button class="seer-btn" onclick="adjustFunnelSeer('current', -1)">-</button>
+                  <span id="funnel-cur-seer" class="seer-val">10</span>
+                  <button class="seer-btn" onclick="adjustFunnelSeer('current', 1)">+</button>
+                </div>
+              </div>
+              <div class="seer-row">
+                <span>New Replacement SEER2:</span>
+                <div class="seer-counter">
+                  <button class="seer-btn" onclick="adjustFunnelSeer('new', -1)">-</button>
+                  <span id="funnel-new-seer" class="seer-val">18</span>
+                  <button class="seer-btn" onclick="adjustFunnelSeer('new', 1)">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Results Display -->
+            <div class="savings-display-box">
+              <div id="funnel-savings-dollar" class="savings-num">$2,178.00</div>
+              <div class="savings-lbl">Estimated 5-Year Utility Bill Savings</div>
+              <div style="font-size: 0.8125rem; color: #047857; margin-top: 4px; font-weight: 700;">
+                ⚡ Cuts Cooling Electric Usage by approx. <strong id="funnel-savings-pct">44%</strong>
+              </div>
+            </div>
+          </div>
+
+          <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-cyan btn-md w-full">
+            💰 Claim $500 Replacement Rebate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 3 High-Value Digital Coupon Vouchers -->
+  <section class="coupons-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pill">Limited Time Incentives</span>
+        <h2 class="section-title">Claim Your Digital HVAC Vouchers</h2>
+        <p class="section-sub">Click any coupon below to claim your promo code and reserve your priority appointment slot.</p>
+      </div>
+
+      <div class="coupons-grid">
+        <!-- Coupon 1 -->
+        <div class="coupon-card">
+          <div>
+            <div class="coupon-amount">$25 OFF</div>
+            <h3 class="coupon-heading">Any HVAC Repair or Diagnostic</h3>
+            <p class="coupon-desc">Valid on all residential air conditioning and heating system repairs in our Georgia service areas.</p>
+            <div class="coupon-code-pill">CODE: REBATE25</div>
+          </div>
+          <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-orange btn-md w-full">
+            Claim $25 Voucher
+          </a>
+        </div>
+
+        <!-- Coupon 2 (Featured) -->
+        <div class="coupon-card featured">
+          <span class="coupon-tag">Most Popular</span>
+          <div>
+            <div class="coupon-amount">$500 OFF</div>
+            <h3 class="coupon-heading">New High-Efficiency System Install</h3>
+            <p class="coupon-desc">Upgrade to an ultra-efficient 16-20+ SEER2 heat pump or AC system. Includes full warranty &amp; load calculation.</p>
+            <div class="coupon-code-pill">CODE: ENERGY500</div>
+          </div>
+          <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-orange btn-md w-full">
+            Claim $500 Rebate
+          </a>
+        </div>
+
+        <!-- Coupon 3 -->
+        <div class="coupon-card">
+          <div>
+            <div class="coupon-amount">FREE</div>
+            <h3 class="coupon-heading">21-Point Safety Check with Repair</h3>
+            <p class="coupon-desc">Get a complete electrical, refrigerant, and safety check included at zero extra charge with any paid repair.</p>
+            <div class="coupon-code-pill">CODE: TUNEUPFREE</div>
+          </div>
+          <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-cyan btn-md w-full">
+            Claim Free Inspection
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Value Stack Comparison Table -->
+  <section class="comparison-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pill">The Apex Advantage</span>
+        <h2 class="section-title">Why Homeowners Trust Apex Air</h2>
+        <p class="section-sub">See how we compare against typical HVAC contractors in Georgia.</p>
+      </div>
+
+      <div class="comp-table-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Service Standard</th>
+              <th class="highlight-col">Apex Air Solutions</th>
+              <th>Other Contractors</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Upfront Flat-Rate Pricing</strong></td>
+              <td class="highlight-col">✓ In writing before work begins</td>
+              <td class="other-col">✗ Hourly rates with surprise add-ons</td>
+            </tr>
+            <tr>
+              <td><strong>Emergency Response Time</strong></td>
+              <td class="highlight-col">✓ Within 60 minutes in service area</td>
+              <td class="other-col">✗ 24-48 hour wait times</td>
+            </tr>
+            <tr>
+              <td><strong>Technician Screening</strong></td>
+              <td class="highlight-col">✓ 100% Drug Tested &amp; NATE Certified</td>
+              <td class="other-col">✗ Varies widely by company</td>
+            </tr>
+            <tr>
+              <td><strong>Installation Warranty</strong></td>
+              <td class="highlight-col">✓ Up to 10-Year Parts &amp; Labor</td>
+              <td class="other-col">✗ 1-year basic warranty</td>
+            </tr>
+            <tr>
+              <td><strong>Clean Home Guarantee</strong></td>
+              <td class="highlight-col">✓ Shoe covers, drop cloths &amp; cleanup</td>
+              <td class="other-col">✗ Often leave debris &amp; dust</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-orange btn-lg">
+          🎁 Claim Your $25 Voucher &amp; Experience the Difference
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Core HVAC Services -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pill">Our Core Expertise</span>
+        <h2 class="section-title">Complete Heating &amp; Air Solutions</h2>
+        <p class="section-sub">From rapid emergency repairs to high-efficiency installations, our team handles it all.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-box">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="AC Repair" class="service-img">
+          <div class="service-content">
+            <div>
+              <h3 class="service-title">Emergency AC Repair</h3>
+              <p class="service-desc">Same-day diagnostic and repair for all makes and models. We fix capacitors, fan motors, refrigerant leaks, and compressors.</p>
+              <ul class="service-features">
+                <li><span>✓</span> Same-day emergency response</li>
+                <li><span>✓</span> Universal parts on trucks</li>
+                <li><span>✓</span> Fixed-Right Guarantee</li>
+              </ul>
+            </div>
+            <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-orange btn-sm w-full">
+              Get Repair Quote
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-box">
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="AC Installation" class="service-img">
+          <div class="service-content">
+            <div>
+              <h3 class="service-title">High-Efficiency Installation</h3>
+              <p class="service-desc">Save up to 45% on monthly power bills with modern SEER2 heat pumps and air conditioners. 0% financing available.</p>
+              <ul class="service-features">
+                <li><span>✓</span> Free in-home energy audit</li>
+                <li><span>✓</span> Up to $500 instant rebate</li>
+                <li><span>✓</span> 10-year parts warranty</li>
+              </ul>
+            </div>
+            <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-cyan btn-sm w-full">
+              Claim $500 Install Rebate
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-box">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80" alt="Preventative Maintenance" class="service-img">
+          <div class="service-content">
+            <div>
+              <h3 class="service-title">21-Point Maintenance</h3>
+              <p class="service-desc">Prevent 85% of sudden breakdowns and keep your system running like new with thorough coil cleaning and calibration.</p>
+              <ul class="service-features">
+                <li><span>✓</span> Electrical &amp; capacitor check</li>
+                <li><span>✓</span> Condensate drain flush</li>
+                <li><span>✓</span> Refrigerant pressure test</li>
+              </ul>
+            </div>
+            <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-orange btn-sm w-full">
+              Schedule Tune-Up ($99)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Real Verified Customer Reviews -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-head" style="color: #ffffff;">
+        <span class="section-pill" style="background: rgba(2, 132, 199, 0.2); color: #38bdf8;">Verified Customer Proof</span>
+        <h2 class="section-title" style="color: #ffffff;">What Buford Homeowners Say About Us</h2>
+        <p class="section-sub" style="color: var(--gray-400);">Over 380 five-star reviews from neighbors across Hall and Gwinnett county.</p>
+      </div>
+
+      <div class="review-card-featured">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p id="funnel-review-quote" class="review-quote">
+          "Our AC went out in the middle of a 95° heatwave on a Saturday afternoon. Apex Air had a technician at our door in 40 minutes. He diagnosed a bad capacitor, had the replacement part right on his truck, and had cold air blowing in 20 minutes. Incredible service and honest pricing!"
+        </p>
+        <div id="funnel-review-author" class="review-author">Neil Meckengy</div>
+        <div id="funnel-review-meta" class="review-meta">Buford, GA • AC Emergency Repair (Verified Homeowner)</div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-btn" onclick="changeFunnelReview(-1)">❮</button>
+        <button class="carousel-btn" onclick="changeFunnelReview(1)">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Transparent Flat-Rate Pricing -->
+  <section class="pricing-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pill">Upfront Pricing</span>
+        <h2 class="section-title">Honest, Flat-Rate Service Pricing</h2>
+        <p class="section-sub">No hidden travel surcharges. No surprise invoices. What we quote is what you pay.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Plan 1 -->
+        <div class="price-card">
+          <div>
+            <h3 class="price-name">System Diagnostic</h3>
+            <div class="price-cost">$79 <span>/ visit</span></div>
+            <p style="font-size: 0.8125rem; color: var(--gray-500); margin-top: 4px;">Waived with any approved repair</p>
+            <ul class="price-features-list">
+              <li><span>✓</span> Full electrical &amp; mechanical check</li>
+              <li><span>✓</span> Refrigerant pressure test</li>
+              <li><span>✓</span> Written upfront quote</li>
+              <li><span>✓</span> Apply $25 voucher promo</li>
+            </ul>
+          </div>
+          <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-outline-dark btn-md w-full" style="border: 2px solid var(--gray-300); color: var(--dark);">
+            Book Diagnostic
+          </a>
+        </div>
+
+        <!-- Plan 2 (Popular) -->
+        <div class="price-card popular">
+          <span class="price-tag-badge">Best Value</span>
+          <div>
+            <h3 class="price-name">Precision Tune-Up</h3>
+            <div class="price-cost">$149 <span>/ system</span></div>
+            <p style="font-size: 0.8125rem; color: var(--primary-dark); margin-top: 4px;">Comprehensive 21-Point Safety Check</p>
+            <ul class="price-features-list">
+              <li><span>✓</span> Deep outdoor coil rinse</li>
+              <li><span>✓</span> Condensate line chemical flush</li>
+              <li><span>✓</span> Thermostat calibration</li>
+              <li><span>✓</span> 15% discount on future repairs</li>
+            </ul>
+          </div>
+          <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-orange btn-md w-full">
+            Book Precision Tune-Up
+          </a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="price-card">
+          <div>
+            <h3 class="price-name">Comfort Club</h3>
+            <div class="price-cost">$19 <span>/ month</span></div>
+            <p style="font-size: 0.8125rem; color: var(--gray-500); margin-top: 4px;">Annual Peace of Mind Plan</p>
+            <ul class="price-features-list">
+              <li><span>✓</span> 2 precision tune-ups / year</li>
+              <li><span>✓</span> VIP front-of-line dispatch</li>
+              <li><span>✓</span> Zero emergency diagnostic fees</li>
+              <li><span>✓</span> 15% discount on all parts</li>
+            </ul>
+          </div>
+          <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-cyan btn-md w-full">
+            Join Comfort Club
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FAQ Accordion -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pill">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-sub">Quick answers regarding scheduling, warranties, and service guarantees.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How fast can an Apex Air technician arrive at my home?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            For emergency heating and cooling breakdowns in Buford, Flowery Branch, and surrounding North Georgia areas, we average a 60-minute dispatch window. Our dispatchers will text you a tracking link when your technician is en route.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Do you charge extra for weekend or after-hours service?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            No! We believe in transparent, honest pricing. We do not charge predatory after-hours overtime rates. You receive the exact same upfront flat-rate pricing 7 days a week.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How do I claim my $25 repair voucher or $500 installation rebate?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Simply click any "Claim Voucher" button on this page to open the pop-up and reserve your promo code (`REBATE25` or `ENERGY500`). When our technician provides your written estimate, the discount will be applied directly to your invoice.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Are your technicians licensed, background checked, and insured?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Yes, 100%. All technicians are NATE-certified, drug-tested, background-checked, and hold active Georgia HVAC licenses. We also carry full 2-million-dollar general liability insurance for your complete protection.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Final High-Urgency Call to Action Banner -->
+  <section class="final-cta-section">
+    <div class="container">
+      <h2 class="final-cta-title">Ready to Restore Total Comfort to Your Home?</h2>
+      <p class="final-cta-sub">
+        Lock in your $25 Repair Voucher or $500 Replacement Rebate today before seasonal slots fill up.
+      </p>
+      <div class="final-btn-group">
+        <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-orange btn-lg">
+          🎁 Claim Your $25 Voucher Now
+        </a>
+        <a href="tel:7709677910" class="btn btn-outline-white btn-lg">
+          📞 Call (770) 967-7910
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Funnel Footer -->
+  <footer class="funnel-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="tel:7709677910">Call: (770) 967-7910</a>
+        <a href="#open-popup" onclick="openGhlPopup(event)">Claim Voucher</a>
+        <span>GA Lic #HVAC-98231</span>
+      </div>
+      <p style="margin-bottom: 8px;">
+        Apex Air Solutions • 7035 Evergreen Way, Buford, GA 30518 • Serving Buford, Gainesville, Sugar Hill, Suwanee &amp; North GA
+      </p>
+      <p style="color: var(--gray-600); font-size: 0.75rem;">
+        &copy; 2026 Apex Air Solutions. All rights reserved. This page is conversion-optimized for GoHighLevel.
+      </p>
+    </div>
+  </footer>
+
+  <!-- 14. Sticky Mobile Conversion Bar -->
+  <div class="mobile-bar">
+    <a href="tel:7709677910" class="btn btn-outline-white" style="background: #0f172a; color: #fff !important; border: none;">
+      📞 Call Now
+    </a>
+    <a href="#open-popup" onclick="openGhlPopup(event)" class="btn btn-orange">
+      🎁 Claim $25 Off
+    </a>
+  </div>
+
+  <!-- GoHighLevel Fallback Preview Modal (Fires if tested outside GoHighLevel environment) -->
+  <div id="ghl-demo-modal" class="ghl-demo-modal">
+    <div class="ghl-demo-modal-content">
+      <button class="modal-close-btn" onclick="closeGhlPopup()">✕</button>
+      <div style="font-size: 2.5rem; margin-bottom: 12px;">🎯</div>
+      <h3 style="font-size: 1.35rem; font-weight: 900; color: var(--dark); margin-bottom: 8px;">
+        GoHighLevel Pop-Up Triggered!
+      </h3>
+      <p style="font-size: 0.9375rem; color: var(--gray-600); line-height: 1.6; margin-bottom: 20px;">
+        In your GoHighLevel Funnel, clicking any button on this page will automatically open your custom <strong>GHL Pop-Up Form</strong>.
+      </p>
+      <div style="background: var(--gray-100); border-radius: var(--radius-md); padding: 14px; text-align: left; font-size: 0.8125rem; color: var(--gray-700); margin-bottom: 20px;">
+        <div><strong>GHL Setup Check:</strong></div>
+        <div style="margin-top: 4px;">• Buttons use standard <code style="background: #fff; padding: 2px 4px; border-radius: 4px; border: 1px solid #cbd5e1;">href="#open-popup"</code></div>
+        <div style="margin-top: 2px;">• In GHL Funnel Builder, ensure Pop-Up is enabled with your Lead Form.</div>
+      </div>
+      <button onclick="closeGhlPopup()" class="btn btn-cyan btn-md w-full">
+        Got it! Continue Previewing
+      </button>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Logic -->
+  <script>
+    // GoHighLevel Pop-up Trigger Bridge
+    function openGhlPopup(e) {
+      if (e) e.preventDefault();
+
+      // Check if running inside GoHighLevel native popup environment
+      if (window.location.hash !== '#open-popup') {
+        window.location.hash = 'open-popup';
+      }
+
+      // Check if GHL global pop-up methods exist
+      if (typeof window.showPopup === 'function') {
+        window.showPopup();
+        return;
+      }
+      
+      const ghlNativePopup = document.querySelector('[data-ghl-popup]') || document.querySelector('.hl-modal');
+      if (ghlNativePopup) {
+        ghlNativePopup.style.display = 'block';
+        return;
+      }
+
+      // Fallback local demonstration modal
+      const demoModal = document.getElementById('ghl-demo-modal');
+      if (demoModal) {
+        demoModal.classList.add('open');
+      }
+    }
+
+    function closeGhlPopup() {
+      const demoModal = document.getElementById('ghl-demo-modal');
+      if (demoModal) {
+        demoModal.classList.remove('open');
+      }
+    }
+
+    // Diagnostics Data
+    const DIAG_DATA = {
+      ac_warm: {
+        title: "Blowing Warm / Room-Temperature Air",
+        cause: "Commonly caused by a failed capacitor, low refrigerant (leak), or tripped outdoor breaker.",
+        est: "Estimated Repair: $120 - $280 • Quick 1-Visit Fix"
+      },
+      ac_dead: {
+        title: "Unit Won't Turn On / Completely Dead",
+        cause: "Tripped high-limit safety switch, blown 3A/5A fuse on control board, or dead transformer.",
+        est: "Estimated Repair: $95 - $190 • Same-Day Dispatch"
+      },
+      ac_ice: {
+        title: "Ice Buildup on Copper Lines / Indoor Coil",
+        cause: "Severely restricted airflow (clogged filter) or low Freon/410A charge freezing the expansion coil.",
+        est: "Estimated Repair: $140 - $350 • Requires Thawing & Leak Test"
+      },
+      ac_noise: {
+        title: "Screeching, Buzzing, or Banging Noises",
+        cause: "Failing condenser fan motor bearings, bad contactor coil, or loose compressor mounting.",
+        est: "Estimated Repair: $150 - $320 • Turn off unit to prevent damage"
+      },
+      heat_cold: {
+        title: "Furnace Blowing Cold Air",
+        cause: "Dirty flame sensor, cracked hot surface ignitor, or gas valve pressure switch error.",
+        est: "Estimated Repair: $110 - $240 • Fast Ignitor Replacement"
+      },
+      heat_smell: {
+        title: "Unusual Burning Odor or Safety Alarm",
+        cause: "Dust burn-off during initial start, or compromised heat exchanger requiring immediate CO testing.",
+        est: "Estimated Repair: $79 Diagnostic • Free Safety Check Included"
+      }
+    };
+
+    let curSystem = 'ac';
+
+    function setFunnelSystem(sys) {
+      curSystem = sys;
+      document.getElementById('btn-funnel-ac').classList.toggle('active', sys === 'ac');
+      document.getElementById('btn-funnel-heat').classList.toggle('active', sys === 'heat');
+      renderFunnelSymptoms();
+    }
+
+    function renderFunnelSymptoms() {
+      const container = document.getElementById('funnel-symptom-container');
+      container.innerHTML = '';
+
+      const acItems = [
+        { id: 'ac_warm', label: 'Blowing warm air', badge: 'Most Common' },
+        { id: 'ac_dead', label: 'AC won\'t turn on', badge: 'Electrical' },
+        { id: 'ac_ice', label: 'Ice on pipes / coil', badge: 'Coil Frost' },
+        { id: 'ac_noise', label: 'Loud screeching / banging', badge: 'Urgent' }
+      ];
+
+      const heatItems = [
+        { id: 'heat_cold', label: 'Furnace blowing cold air', badge: 'Ignition' },
+        { id: 'heat_smell', label: 'Burning smell / gas odor', badge: 'Safety' },
+        { id: 'ac_dead', label: 'Thermostat clicks but no heat', badge: 'Control' }
+      ];
+
+      const items = curSystem === 'ac' ? acItems : heatItems;
+
+      items.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = 'symptom-item ' + (idx === 0 ? 'active' : '');
+        div.innerHTML = `<span>${item.label}</span><span class="symptom-badge">${item.badge}</span>`;
+        div.onclick = function() {
+          document.querySelectorAll('.symptom-item').forEach(el => el.classList.remove('active'));
+          div.classList.add('active');
+          showDiag(item.id);
+        };
+        container.appendChild(div);
+      });
+
+      showDiag(items[0].id);
+    }
+
+    function showDiag(id) {
+      const info = DIAG_DATA[id] || DIAG_DATA['ac_warm'];
+      document.getElementById('funnel-diag-title').innerText = info.title;
+      document.getElementById('funnel-diag-cause').innerText = info.cause;
+      document.getElementById('funnel-diag-est').innerText = info.est;
+    }
+
+    // SEER2 Energy Savings Calculator Logic
+    let fCurSeer = 10;
+    let fNewSeer = 18;
+
+    function adjustFunnelSeer(type, delta) {
+      if (type === 'current') {
+        fCurSeer = Math.min(15, Math.max(8, fCurSeer + delta));
+        document.getElementById('funnel-cur-seer').innerText = fCurSeer;
+      } else {
+        fNewSeer = Math.min(24, Math.max(14, fNewSeer + delta));
+        document.getElementById('funnel-new-seer').innerText = fNewSeer;
+      }
+      calcFunnelSavings();
+    }
+
+    function calcFunnelSavings() {
+      const btu = 3.5 * 12000;
+      const hours = 2800;
+      const rate = 0.18;
+
+      const oldCost = ((btu / fCurSeer) * hours / 1000) * rate;
+      const newCost = ((btu / Math.max(fNewSeer, fCurSeer)) * hours / 1000) * rate;
+
+      const annual = Math.max(0, oldCost - newCost);
+      const fiveYear = Math.round(annual * 5);
+      const pct = Math.round(((fNewSeer - fCurSeer) / fNewSeer) * 100);
+
+      document.getElementById('funnel-savings-dollar').innerText = '$' + fiveYear.toLocaleString('en-US') + '.00';
+      document.getElementById('funnel-savings-pct').innerText = Math.max(0, pct) + '%';
+    }
+
+    // Testimonials Carousel
+    const REVIEWS_DB = [
+      {
+        quote: "Our AC went out in the middle of a 95° heatwave on a Saturday afternoon. Apex Air had a technician at our door in 40 minutes. He diagnosed a bad capacitor, had the replacement part right on his truck, and had cold air blowing in 20 minutes. Incredible service and honest pricing!",
+        author: "Neil Meckengy",
+        meta: "Buford, GA • AC Emergency Repair (Verified Homeowner)"
+      },
+      {
+        quote: "Replaced our 16-year-old 10 SEER unit with a modern 18 SEER heat pump. The energy savings calculator on their website was spot on — our power bill dropped by nearly 40%! The installation crew was polite, wore shoe covers, and left the basement cleaner than they found it.",
+        author: "Sarah Jenkins",
+        meta: "Flowery Branch, GA • New System Replacement (Verified Homeowner)"
+      },
+      {
+        quote: "Zero pushy sales tactics. They gave us 3 straightforward pricing tiers and explained the pros/cons of each. They had our new furnace running before freezing temperatures hit. Highly recommend Apex Air to anyone in North GA.",
+        author: "Amanda & Robert Vance",
+        meta: "Sugar Hill, GA • Furnace Replacement (Verified Homeowner)"
+      }
+    ];
+
+    let curRevIdx = 0;
+
+    function changeFunnelReview(delta) {
+      curRevIdx = (curRevIdx + delta + REVIEWS_DB.length) % REVIEWS_DB.length;
+      const rev = REVIEWS_DB[curRevIdx];
+      document.getElementById('funnel-review-quote').innerText = `"${rev.quote}"`;
+      document.getElementById('funnel-review-author').innerText = rev.author;
+      document.getElementById('funnel-review-meta').innerText = rev.meta;
+    }
+
+    // FAQ Accordion
+    function toggleFaq(el) {
+      const parent = el.parentElement;
+      parent.classList.toggle('open');
+    }
+
+    // Init on load
+    renderFunnelSymptoms();
+    calcFunnelSavings();
+  </script>
+</body>
+</html>

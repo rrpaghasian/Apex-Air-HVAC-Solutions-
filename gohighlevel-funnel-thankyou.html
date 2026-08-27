@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Voucher Reserved! | Apex Air Solutions Thank You</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       APEX AIR SOLUTIONS - GOHIGHLEVEL THANK YOU / CONFIRMATION STEP
+       ========================================================================== */
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --accent: #f97316;
+      --accent-hover: #ea580c;
+      --accent-light: #ffedd5;
+      --dark: #0f172a;
+      --dark-800: #1e293b;
+      --dark-900: #0f172a;
+      --dark-950: #090d16;
+      --emerald: #10b981;
+      --emerald-dark: #059669;
+      --emerald-light: #d1fae5;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: #f8fafc;
+      color: var(--dark);
+      line-height: 1.5;
+      overflow-x: hidden;
+      font-family: var(--font);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    @media (min-width: 768px) {
+      .container { padding: 0 24px; }
+    }
+
+    /* Clean Funnel Header */
+    .funnel-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 16px 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .funnel-header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #0284c7, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+    }
+    .logo-text {
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+      line-height: 1.1;
+    }
+    .logo-text span { color: var(--primary); }
+    .logo-sub {
+      font-size: 0.6875rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 800;
+      border-radius: var(--radius-md);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .btn-orange {
+      background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+    }
+    .btn-orange:hover {
+      background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%);
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+      transform: translateY(-2px);
+    }
+    .btn-cyan {
+      background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
+      color: #ffffff !important;
+    }
+    .btn-cyan:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+      transform: translateY(-2px);
+    }
+    .btn-lg { padding: 16px 32px; font-size: 1.125rem; border-radius: var(--radius-lg); }
+
+    /* Main Thank You Card */
+    .thankyou-wrapper {
+      padding: 48px 0;
+      flex: 1;
+    }
+    .thankyou-card {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-xl);
+      padding: 40px 24px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    @media (min-width: 768px) {
+      .thankyou-card { padding: 56px 48px; }
+    }
+
+    .success-icon-badge {
+      width: 72px;
+      height: 72px;
+      background: #d1fae5;
+      color: #059669;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.25rem;
+      margin-bottom: 24px;
+      box-shadow: 0 0 0 10px #ecfdf5;
+    }
+
+    .thankyou-title {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    @media (min-width: 768px) {
+      .thankyou-title { font-size: 2.5rem; }
+    }
+
+    .thankyou-sub {
+      font-size: 1.0625rem;
+      color: var(--gray-600);
+      max-width: 650px;
+      margin: 0 auto 32px auto;
+      line-height: 1.6;
+    }
+
+    /* VIP Fast-Track Box */
+    .vip-call-card {
+      background: linear-gradient(135deg, #090d16 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: var(--radius-xl);
+      padding: 32px 24px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .vip-badge {
+      display: inline-block;
+      background: #dc2626;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+    }
+    .vip-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .vip-desc {
+      font-size: 0.9375rem;
+      color: var(--gray-300);
+      max-width: 580px;
+      margin: 0 auto 20px auto;
+    }
+    .vip-phone-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+      color: #ffffff !important;
+      font-weight: 900;
+      font-size: 1.25rem;
+      padding: 16px 36px;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+      transition: all 0.2s;
+    }
+    .vip-phone-btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(249, 115, 22, 0.5);
+    }
+
+    /* 3-Step Timeline */
+    .timeline-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      text-align: left;
+      margin-bottom: 36px;
+    }
+    @media (min-width: 768px) {
+      .steps-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .step-box {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      position: relative;
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #ffffff;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      margin-bottom: 12px;
+    }
+    .step-heading {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .step-text {
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    /* Bonus Perk Box */
+    .bonus-box {
+      background: #ecfdf5;
+      border: 2px dashed #10b981;
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .bonus-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+    .bonus-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #065f46;
+      margin-bottom: 2px;
+    }
+    .bonus-desc {
+      font-size: 0.8125rem;
+      color: #047857;
+    }
+
+    /* Footer */
+    .thankyou-footer {
+      background: #ffffff;
+      border-top: 1px solid var(--gray-200);
+      padding: 24px 0;
+      text-align: center;
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Funnel Header -->
+  <header class="funnel-header">
+    <div class="container">
+      <div class="funnel-header-inner">
+        <div class="logo-box">
+          <div class="logo-icon">❄️</div>
+          <div>
+            <div class="logo-text">APEX<span>AIR</span></div>
+            <div class="logo-sub">Heating &amp; Air Solutions</div>
+          </div>
+        </div>
+
+        <div>
+          <a href="tel:7709677910" style="font-weight: 800; font-size: 0.9375rem; color: var(--dark);">
+            📞 (770) 967-7910
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Thank You Content -->
+  <main class="thankyou-wrapper">
+    <div class="container">
+      <div class="thankyou-card">
+        <!-- Success Badge -->
+        <div class="success-icon-badge">✓</div>
+
+        <h1 class="thankyou-title">
+          You're All Set! Your $25 HVAC Voucher is Reserved.
+        </h1>
+        <p class="thankyou-sub">
+          We have received your priority booking request. Your promo voucher has been logged in our dispatch schedule for <strong>Buford, Flowery Branch &amp; North Georgia</strong>.
+        </p>
+
+        <!-- VIP Fast-Track Emergency Call Box -->
+        <div class="vip-call-card">
+          <span class="vip-badge">Fast-Track Priority Dispatch</span>
+          <h2 class="vip-title">Need Immediate Same-Day Service Right Now?</h2>
+          <p class="vip-desc">
+            To skip the standard callback queue and speak immediately with a live on-call dispatcher, call our direct line below:
+          </p>
+          <a href="tel:7709677910" class="vip-phone-btn">
+            <span>📞</span> <span>Call Now: (770) 967-7910</span>
+          </a>
+          <p style="font-size: 0.75rem; color: var(--gray-400); margin-top: 12px;">
+            Mention Promo Code: <strong style="color: #fdba74;">REBATE25</strong> for instant discount verification.
+          </p>
+        </div>
+
+        <!-- 3-Step What Happens Next -->
+        <h3 class="timeline-title">What Happens Next</h3>
+        <div class="steps-grid">
+          <div class="step-box">
+            <div class="step-num">1</div>
+            <h4 class="step-heading">SMS &amp; Email Confirmation</h4>
+            <p class="step-text">
+              Your voucher confirmation and promo code have been securely registered to your contact details.
+            </p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-num">2</div>
+            <h4 class="step-heading">15-Minute Dispatch Call</h4>
+            <p class="step-text">
+              Our lead dispatcher will call you shortly to confirm your preferred 2-hour arrival window and technician ETA.
+            </p>
+          </div>
+
+          <div class="step-box">
+            <div class="step-num">3</div>
+            <h4 class="step-heading">Certified Tech Arrival</h4>
+            <p class="step-text">
+              A NATE-certified master technician arrives in a fully stocked truck with upfront written pricing and shoe covers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bonus Perk -->
+        <div class="bonus-box">
+          <div class="bonus-icon">🎁</div>
+          <div>
+            <h4 class="bonus-title">Exclusive Phone Booking Bonus</h4>
+            <p class="bonus-desc">
+              Mention this confirmation page on the phone with our dispatcher to receive an additional <strong>10% OFF all air filter replacements</strong> during your service visit!
+            </p>
+          </div>
+        </div>
+
+        <!-- Back Link -->
+        <div style="margin-top: 16px;">
+          <a href="tel:7709677910" class="btn btn-orange btn-lg">
+            📞 Call Dispatch Desk: (770) 967-7910
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="thankyou-footer">
+    <div class="container">
+      <p style="margin-bottom: 4px;">
+        Apex Air Solutions • 7035 Evergreen Way, Buford, GA 30518 • 24/7 Emergency Dispatch Line: (770) 967-7910
+      </p>
+      <p style="color: var(--gray-400); font-size: 0.75rem;">
+        GA Lic #HVAC-98231 • 100% Satisfaction Guarantee
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

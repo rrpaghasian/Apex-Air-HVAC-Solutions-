@@ -1,0 +1,2717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Apex Air Solutions | Heating & Air Conditioning Specialists</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       APEX AIR SOLUTIONS - GOHIGHLEVEL STANDALONE CUSTOM STYLES
+       ========================================================================== */
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --accent: #f97316;
+      --accent-hover: #ea580c;
+      --accent-light: #ffedd5;
+      --dark: #0f172a;
+      --dark-800: #1e293b;
+      --dark-850: #182234;
+      --dark-900: #0f172a;
+      --dark-950: #090d16;
+      --emerald: #10b981;
+      --emerald-dark: #059669;
+      --emerald-light: #d1fae5;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: var(--dark);
+      line-height: 1.5;
+      overflow-x: hidden;
+      padding-bottom: 70px;
+      font-family: var(--font);
+    }
+
+    @media (min-width: 769px) {
+      body { padding-bottom: 0; }
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font-family: inherit; }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    @media (min-width: 768px) {
+      .container { padding: 0 24px; }
+    }
+
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .items-center { align-items: center; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .flex-col { flex-direction: column; }
+    .flex-wrap { flex-wrap: wrap; }
+    .gap-1 { gap: 4px; }
+    .gap-2 { gap: 8px; }
+    .gap-3 { gap: 12px; }
+    .gap-4 { gap: 16px; }
+    .w-full { width: 100%; }
+    .text-center { text-align: center; }
+    .relative { position: relative; }
+    .overflow-hidden { overflow: hidden; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 800;
+      border-radius: var(--radius-md);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      white-space: nowrap;
+      user-select: none;
+      font-size: 0.95rem;
+      padding: 12px 24px;
+      min-height: 46px;
+    }
+    .btn:active { transform: scale(0.97); }
+
+    .btn-orange {
+      background-color: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+    }
+    .btn-orange:hover {
+      background-color: var(--accent-hover);
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+    }
+
+    .btn-cyan {
+      background-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+    }
+    .btn-cyan:hover {
+      background-color: var(--primary-dark);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+    }
+
+    .btn-dark {
+      background-color: var(--dark);
+      color: #ffffff;
+    }
+    .btn-dark:hover { background-color: var(--dark-950); }
+
+    .btn-outline-cyan {
+      background-color: #ffffff;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+    }
+    .btn-outline-cyan:hover {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    /* 1. TOP BAR */
+    .ghl-topbar {
+      background-color: var(--dark);
+      color: var(--gray-300);
+      font-size: 0.8rem;
+      border-bottom: 1px solid var(--dark-800);
+      padding: 8px 0;
+      position: relative;
+      z-index: 50;
+    }
+    .ghl-topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .dispatch-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #ea580c;
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+    }
+    .service-area-select {
+      background-color: var(--dark-800);
+      color: #ffffff;
+      border: 1px solid var(--gray-700);
+      border-radius: var(--radius-sm);
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* 2. NAVBAR */
+    .ghl-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      transition: box-shadow 0.2s ease;
+    }
+    .ghl-header.scrolled {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .ghl-nav {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .brand-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #06b6d4 0%, #1d4ed8 100%);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(6, 182, 212, 0.25);
+    }
+    .brand-name {
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+      line-height: 1;
+    }
+    .brand-name span { color: var(--primary); }
+    .brand-sub {
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-top: 3px;
+    }
+
+    /* Desktop Navigation - Spacious & Clean */
+    .nav-links-desktop {
+      display: none;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-link-item {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--dark);
+      transition: color 0.2s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .nav-link-item:hover { color: var(--primary); }
+    .nav-pill-badge {
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 1px 7px;
+      border-radius: var(--radius-full);
+    }
+    .pill-green {
+      background-color: var(--emerald-light);
+      color: var(--emerald-dark);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .nav-right-cta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+    .nav-phone-block {
+      display: none;
+      flex-direction: column;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .nav-phone-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .nav-phone-num {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .hamburger-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 38px;
+      height: 38px;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .hamburger-btn span {
+      width: 100%;
+      height: 2.5px;
+      background-color: var(--dark);
+      border-radius: 2px;
+    }
+    .mobile-menu-drawer {
+      display: none;
+      background: #ffffff;
+      border-top: 1px solid var(--gray-200);
+      padding: 16px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    .mobile-menu-drawer.open { display: block; }
+    .mobile-grid-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .mobile-grid-nav a {
+      background: var(--gray-50);
+      padding: 12px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--dark);
+      text-align: center;
+    }
+
+    @media (min-width: 992px) {
+      .nav-links-desktop { display: flex; }
+      .nav-phone-block { display: flex; }
+      .hamburger-btn { display: none; }
+    }
+
+    /* 3. HERO SECTION */
+    .ghl-hero {
+      background: linear-gradient(180deg, #090d16 0%, #0f172a 50%, #1e293b 100%);
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      padding: 50px 0 60px;
+    }
+    @media (min-width: 992px) {
+      .ghl-hero { padding: 80px 0 90px; }
+    }
+    .hero-bg-layer {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      mix-blend-mode: luminosity;
+      pointer-events: none;
+    }
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #090d16 0%, rgba(15, 23, 42, 0.88) 50%, rgba(9, 13, 22, 0.75) 100%);
+    }
+    .ambient-glow-1 {
+      position: absolute;
+      top: -50px;
+      right: 15%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, rgba(0,0,0,0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .ambient-glow-2 {
+      position: absolute;
+      bottom: -50px;
+      left: 5%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, rgba(0,0,0,0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+    @media (min-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 50px;
+      }
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      color: #67e8f9;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(8px);
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+    .hero-title .highlight-orange {
+      color: #fb923c;
+      text-decoration: underline;
+      text-decoration-color: var(--primary);
+      text-underline-offset: 8px;
+      text-decoration-thickness: 4px;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--gray-300);
+      line-height: 1.6;
+      margin-bottom: 28px;
+      max-width: 600px;
+    }
+    .hero-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+    .hero-checklist {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+    .check-icon-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .hero-tech-card {
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      box-shadow: var(--shadow-2xl);
+      backdrop-filter: blur(12px);
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    .tech-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 16px;
+    }
+    .live-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #34d399;
+    }
+    .status-ping {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.3);
+      animation: pulse 1.5s infinite;
+    }
+    .tech-profile {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .tech-img {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-md);
+      object-fit: cover;
+      border: 2px solid var(--primary);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
+    .tech-info h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .tech-info p {
+      font-size: 0.75rem;
+      color: var(--gray-300);
+      line-height: 1.4;
+    }
+    .tech-card-stats {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 14px;
+      margin-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+    .stat-box strong {
+      display: block;
+      color: #38bdf8;
+      font-size: 0.95rem;
+      font-weight: 900;
+    }
+    .stat-box span {
+      font-size: 0.7rem;
+      color: var(--gray-400);
+    }
+
+    /* 4. DUAL INTERACTIVE WIDGETS */
+    .ghl-interactive-section {
+      background-color: var(--gray-100);
+      padding: 60px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .dual-widget-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 992px) {
+      .dual-widget-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .widget-box {
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      color: #ffffff;
+      box-shadow: var(--shadow-xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    @media (min-width: 768px) {
+      .widget-box { padding: 36px; }
+    }
+    .widget-orange {
+      background: linear-gradient(135deg, #f97316 0%, #c2410c 100%);
+    }
+    .widget-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .widget-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .widget-title {
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .widget-sub {
+      font-size: 0.8rem;
+      color: #ffedd5;
+      margin-top: 2px;
+    }
+
+    .system-toggle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .toggle-btn {
+      background: rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #ffffff;
+      padding: 12px;
+      border-radius: var(--radius-md);
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .toggle-btn.active {
+      background: #ffffff;
+      color: var(--accent-hover);
+      border-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .symptom-radio-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .symptom-radio-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .symptom-radio-item.selected {
+      background: rgba(255,255,255,0.25);
+      border-color: #ffffff;
+    }
+    .symptom-badge {
+      font-size: 0.65rem;
+      font-weight: 800;
+      background: rgba(0,0,0,0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .diagnosis-result-card {
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(249, 115, 22, 0.4);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 18px;
+      color: #f1f5f9;
+    }
+    .diagnosis-tag {
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      background: rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .widget-seer {
+      background: linear-gradient(135deg, #0284c7 0%, #075985 100%);
+    }
+    .seer-stat-display {
+      background: #ffffff;
+      color: var(--dark);
+      border-radius: var(--radius-lg);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    .seer-circle {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      border: 5px solid var(--primary);
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--primary-dark);
+      flex-shrink: 0;
+    }
+    .seer-savings-text strong {
+      font-size: clamp(1.4rem, 4vw, 1.9rem);
+      font-weight: 900;
+      color: var(--emerald-dark);
+      display: block;
+      line-height: 1.1;
+    }
+    .seer-savings-tag {
+      background: var(--emerald-light);
+      color: var(--emerald-dark);
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      display: inline-block;
+      margin-top: 4px;
+    }
+    .seer-input-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .seer-control-box {
+      background: rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-md);
+      padding: 12px;
+    }
+    .seer-control-box label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #bae6fd;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .seer-control-box input, .seer-control-box select {
+      width: 100%;
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #ffffff;
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      outline: none;
+    }
+    .seer-stepper-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .stepper-card {
+      background: #0284c7;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .stepper-val-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 6px 0;
+    }
+    .stepper-num {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffffff;
+    }
+    .stepper-btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .step-btn {
+      width: 26px;
+      height: 22px;
+      background: rgba(0,0,0,0.3);
+      border: none;
+      color: #ffffff;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+    .step-btn:hover { background: rgba(0,0,0,0.5); }
+
+    /* 5. SERVICES */
+    .ghl-section {
+      padding: 70px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+    .section-pill {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .section-desc {
+      font-size: 0.95rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+    .services-grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .services-grid-container { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .services-grid-container { grid-template-columns: repeat(3, 1fr); }
+    }
+    .service-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary);
+    }
+    .service-img-wrap {
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+      background: var(--gray-100);
+    }
+    .service-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .service-card:hover .service-img { transform: scale(1.06); }
+    .service-price-tag {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--gray-700);
+      backdrop-filter: blur(4px);
+    }
+    .service-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .service-content h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .service-content p {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .service-bullets {
+      list-style: none;
+      border-top: 1px solid var(--gray-100);
+      padding-top: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .service-bullets li {
+      font-size: 0.8rem;
+      color: var(--gray-700);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .service-actions {
+      border-top: 1px solid var(--gray-100);
+      padding-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* 6. MAINTENANCE */
+    .ghl-maintenance-section {
+      background: linear-gradient(135deg, #0e7490 0%, #0369a1 50%, #1e3a8a 100%);
+      color: #ffffff;
+      padding: 70px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .benefits-matrix {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      max-width: 1000px;
+      margin: 32px auto 40px;
+    }
+    @media (min-width: 640px) {
+      .benefits-matrix { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 992px) {
+      .benefits-matrix { grid-template-columns: repeat(3, 1fr); }
+    }
+    .benefit-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      backdrop-filter: blur(6px);
+      transition: background 0.2s;
+    }
+    .benefit-card:hover { background: rgba(255, 255, 255, 0.2); }
+    .benefit-icon-box {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background: rgba(15, 23, 42, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #67e8f9;
+    }
+
+    /* 7. CERTIFICATIONS */
+    .certifications-section {
+      background: #ffffff;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--gray-200);
+      text-align: center;
+    }
+    .cert-badges-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .cert-badge-box {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .cert-badge-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cert-info { text-align: left; }
+    .cert-info strong { font-size: 0.85rem; color: var(--dark); display: block; }
+    .cert-info span { font-size: 0.7rem; color: var(--gray-500); }
+
+    /* 8. SPLIT REVIEWS */
+    .reviews-split-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 992px) {
+      .reviews-split-grid { grid-template-columns: 1.2fr 0.8fr; }
+    }
+    .testimonial-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .review-stars { color: #f59e0b; font-size: 1.2rem; margin-bottom: 6px; }
+    .review-quote-text {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--gray-700);
+      line-height: 1.6;
+      margin: 16px 0;
+    }
+    .review-author h4 { font-size: 1.05rem; font-weight: 800; color: var(--dark); }
+    .rate-tech-widget {
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-xl);
+    }
+
+    /* 9. COUPONS */
+    .coupons-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 640px) {
+      .coupons-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .coupons-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .coupon-card {
+      border: 2px dashed var(--primary);
+      border-radius: var(--radius-lg);
+      background: #f0fdf4;
+      padding: 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s;
+    }
+    .coupon-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .coupon-tag-pill {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+    }
+    .coupon-price-display {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin: 10px 0;
+    }
+    .coupon-code-box {
+      background: #ffffff;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+      font-family: monospace;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    /* 10. PRICING */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    @media (min-width: 900px) {
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); align-items: center; }
+    }
+    .pricing-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .pricing-card.featured {
+      border: 2.5px solid var(--primary);
+      box-shadow: 0 15px 35px rgba(2, 132, 199, 0.15);
+      transform: scale(1.03);
+    }
+    .featured-tag {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 4px 16px;
+      border-radius: var(--radius-full);
+    }
+    .price-num {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--dark);
+    }
+    .pricing-features {
+      list-style: none;
+      margin: 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: var(--gray-700);
+    }
+    .pricing-features li { display: flex; align-items: flex-start; gap: 8px; }
+
+    /* 11. SIDE-BY-SIDE FINAL SECTION & EMBEDDED FORM */
+    .ghl-cta-section {
+      background: linear-gradient(180deg, #0f172a 0%, #090d16 100%);
+      color: #ffffff;
+      padding: 70px 0 85px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-split-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (min-width: 992px) {
+      .cta-split-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+      }
+    }
+    .cta-left-content {
+      text-align: left;
+    }
+    .cta-card-title {
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+    .cta-card-sub {
+      font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+      color: var(--gray-300);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .cta-phone-callout {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    @media (min-width: 520px) {
+      .cta-phone-callout {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    .cta-trust-grid-2col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 480px) {
+      .cta-trust-grid-2col { grid-template-columns: 1fr 1fr; }
+    }
+    .cta-trust-badge {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+    .form-embed-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-xl);
+      padding: 20px 16px;
+      box-shadow: var(--shadow-2xl);
+      backdrop-filter: blur(12px);
+    }
+    @media (min-width: 640px) {
+      .form-embed-card { padding: 24px 20px; }
+    }
+    .form-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* 12. FOOTER - Spacious Balanced 2-Column Grid */
+    .ghl-footer {
+      background-color: var(--dark-950);
+      color: var(--gray-400);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--dark-800);
+      padding: 60px 0 30px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--dark-800);
+    }
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 48px;
+      }
+    }
+    .footer-link-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 540px) {
+      .footer-link-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+    }
+    .footer-nav-card {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(51, 65, 85, 0.6);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #e2e8f0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .footer-nav-card:hover {
+      background: rgba(30, 41, 59, 0.9);
+      border-color: var(--primary);
+      color: #38bdf8;
+      transform: translateX(2px);
+    }
+
+    /* 13. MODALS */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-box {
+      background: #ffffff;
+      color: var(--dark);
+      border-radius: var(--radius-xl);
+      width: 100%;
+      max-width: 580px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-2xl);
+      position: relative;
+      animation: modalIn 0.25s ease-out;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.7);
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      z-index: 10;
+    }
+
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border-top: 1px solid var(--gray-200);
+      padding: 10px 16px;
+      z-index: 999;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.1);
+      gap: 10px;
+    }
+    @media (max-width: 768px) {
+      .mobile-sticky-bar { display: flex; }
+    }
+    .mobile-sticky-bar a, .mobile-sticky-bar button {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 8px;
+      border-radius: var(--radius-md);
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. TOP BAR -->
+  <div class="ghl-topbar">
+    <div class="container">
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="dispatch-badge">
+          <span class="pulse-dot"></span>
+          Live Dispatch
+        </span>
+        <span style="color: #cbd5e1; font-weight: 600;">Technicians available in your area today.</span>
+        <div class="flex items-center gap-1" style="border-left: 1px solid #334155; padding-left: 8px;">
+          <span>📍 Serving:</span>
+          <select class="service-area-select" id="ghl-service-area">
+            <option value="Buford">Buford &amp; nearby</option>
+            <option value="Flowery Branch">Flowery Branch &amp; nearby</option>
+            <option value="Gainesville">Gainesville &amp; nearby</option>
+            <option value="Sugar Hill">Sugar Hill &amp; nearby</option>
+            <option value="Suwanee">Suwanee &amp; nearby</option>
+            <option value="Cumming">Cumming &amp; nearby</option>
+            <option value="Braselton">Braselton &amp; nearby</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <span>⏰ 24/7 Emergency Service:</span>
+        <a href="tel:7709677910" style="color: #ffffff; font-weight: 900; white-space: nowrap;">📞 (770) 967-7910</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. NAVBAR -->
+  <header class="ghl-header" id="main-header">
+    <div class="container">
+      <nav class="ghl-nav">
+        <!-- Logo -->
+        <a href="#" class="brand-logo" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+          <div class="brand-icon-box">
+            <span style="font-size: 1.3rem;">❄️</span>
+          </div>
+          <div>
+            <div class="brand-name">APEX<span>AIR</span></div>
+            <div class="brand-sub">Heating &amp; Air Solutions</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links - Clean, spacious & evenly distributed -->
+        <ul class="nav-links-desktop">
+          <li><a class="nav-link-item" href="#hero">Home</a></li>
+          <li><a class="nav-link-item" href="#services">Our Services</a></li>
+          <li>
+            <a class="nav-link-item" href="#seer">
+              <span>SEER Savings</span>
+              <span class="nav-pill-badge pill-green">ROI</span>
+            </a>
+          </li>
+          <li><a class="nav-link-item" href="#maintenance">Maintenance</a></li>
+        </ul>
+
+        <!-- Right Header CTA (Leads Directly to Funnel) -->
+        <div class="nav-right-cta">
+          <div class="nav-phone-block">
+            <span class="nav-phone-label">Speak to a Technician</span>
+            <a href="tel:7709677910" class="nav-phone-num">
+              <span>📞</span> (770) 967-7910
+            </a>
+          </div>
+
+          <button type="button" class="btn btn-orange" onclick="goToFunnel('REBATE25')">
+            📅 Book Online
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button class="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu-drawer" id="mobileDrawer">
+      <div class="mobile-grid-nav">
+        <a href="#" onclick="toggleMobileMenu(); window.scrollTo({top:0, behavior:'smooth'});">Home</a>
+        <a href="#services" onclick="toggleMobileMenu()">Our Services</a>
+        <a href="#seer" onclick="toggleMobileMenu()" style="color: var(--emerald-dark);">SEER Calculator</a>
+        <a href="#maintenance" onclick="toggleMobileMenu()">Maintenance Plan</a>
+      </div>
+      <a href="tel:7709677910" class="btn btn-dark" style="width: 100%; margin-bottom: 8px;">
+        📞 Call (770) 967-7910
+      </a>
+      <button type="button" class="btn btn-orange" style="width: 100%;" onclick="toggleMobileMenu(); goToFunnel('REBATE25');">
+        📅 Book Service Window Online &rarr;
+      </button>
+    </div>
+  </header>
+
+  <!-- 3. HERO -->
+  <section class="ghl-hero" id="hero">
+    <div class="hero-bg-layer"></div>
+    <div class="hero-bg-overlay"></div>
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-pill">
+            <span>✨</span> Buford &amp; Hall County's #1 Rated HVAC Team
+          </div>
+
+          <h1 class="hero-title">
+            Get <span class="highlight-orange">$25 off</span> <br/>
+            on any service call
+          </h1>
+
+          <p class="hero-sub">
+            Fast, same-day HVAC repair, precision seasonal tune-ups, and high-efficiency system replacements with 100% upfront pricing.
+          </p>
+
+          <div class="hero-btn-group">
+            <button type="button" class="btn btn-orange" onclick="goToFunnel('REBATE25')">
+              Book Now &rarr;
+            </button>
+            <a href="#seer" class="btn btn-cyan">
+              Get Estimate
+            </a>
+          </div>
+
+          <div class="hero-checklist">
+            <div class="check-item"><div class="check-icon-circle">✓</div><span>Same-Day Local Dispatch</span></div>
+            <div class="check-item"><div class="check-icon-circle">✓</div><span>100% Upfront Quotes</span></div>
+            <div class="check-item"><div class="check-icon-circle">✓</div><span>EPA-Certified Techs</span></div>
+            <div class="check-item"><div class="check-icon-circle">✓</div><span>1-Yr Workmanship Warranty</span></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="hero-tech-card">
+            <div class="tech-card-header">
+              <div class="live-status">
+                <span class="status-ping"></span>
+                <span>Active On-Duty Techs</span>
+              </div>
+              <span style="font-size: 0.75rem; color: var(--gray-400);">Avg response: 45m</span>
+            </div>
+
+            <div class="tech-profile">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=240&q=80" alt="Certified HVAC Specialist" class="tech-img" />
+              <div class="tech-info">
+                <h4>Need Quick HVAC Help?</h4>
+                <p>Our emergency trucks carry 95% of universal AC &amp; furnace parts for immediate fixes.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <a href="#diagnostics" class="btn btn-orange" style="width: 100%; font-size: 0.85rem; justify-content: space-between;">
+                <span>🔧 Diagnose AC/Heating Issue</span>
+                <span style="background: rgba(255,255,255,0.25); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem;">Start Quiz &rarr;</span>
+              </a>
+
+              <a href="tel:7709677910" class="btn btn-dark" style="width: 100%; font-size: 0.85rem; border: 1px solid var(--gray-700);">
+                ⏰ Call Emergency: (770) 967-7910
+              </a>
+            </div>
+
+            <div class="tech-card-stats">
+              <div class="stat-box"><strong>4.9 ★</strong><span>380+ Reviews</span></div>
+              <div style="width: 1px; height: 24px; background: rgba(255,255,255,0.15);"></div>
+              <div class="stat-box"><strong>100%</strong><span>Fixed Right Guarantee</span></div>
+              <div style="width: 1px; height: 24px; background: rgba(255,255,255,0.15);"></div>
+              <div class="stat-box"><strong>NATE</strong><span>Certified Techs</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. DUAL WIDGETS -->
+  <section class="ghl-interactive-section">
+    <div class="container">
+      <div class="dual-widget-grid">
+        
+        <!-- Left: Troubleshooting -->
+        <div class="widget-box widget-orange" id="diagnostics">
+          <div>
+            <div class="widget-header">
+              <div class="widget-icon-box">🔧</div>
+              <div>
+                <h3 class="widget-title">HVAC Troubleshooting System</h3>
+                <p class="widget-sub">Interactive diagnostic tool for fast home comfort resolution</p>
+              </div>
+            </div>
+
+            <div id="troubleshooter-step-1">
+              <label style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #fed7aa; display: block; margin-bottom: 8px;">
+                What type of problem are you having?
+              </label>
+              <div class="system-toggle-grid">
+                <button type="button" class="toggle-btn active" id="btn-toggle-ac" onclick="setTroubleSystem('ac')">❄️ Air Conditioning</button>
+                <button type="button" class="toggle-btn" id="btn-toggle-heat" onclick="setTroubleSystem('heat')">🔥 Heating &amp; Furnace</button>
+              </div>
+
+              <label style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #fed7aa; display: block; margin-bottom: 8px;">
+                Select your primary symptom:
+              </label>
+              <div class="symptom-radio-list" id="symptom-radio-container"></div>
+
+              <button type="button" class="btn btn-dark" style="width: 100%; margin-top: 10px;" onclick="goToTroubleshooterStep2()">
+                Next &amp; View Diagnosis &rarr;
+              </button>
+            </div>
+
+            <div id="troubleshooter-step-2" style="display: none;">
+              <div class="diagnosis-result-card">
+                <span class="diagnosis-tag">System Finding</span>
+                <h4 style="font-size: 1.1rem; font-weight: 800; color: #ffffff; margin-bottom: 10px;" id="diag-title">
+                  Unit Running But Blowing Warm Air
+                </h4>
+                <div style="font-size: 0.8rem; line-height: 1.5; border-top: 1px solid #334155; padding-top: 10px; margin-top: 10px;">
+                  <p style="margin-bottom: 6px;"><strong style="color: #fdba74;">Likely Root Cause:</strong> <span id="diag-cause">Low refrigerant charge or failed start capacitor.</span></p>
+                  <p style="margin-bottom: 10px;"><strong style="color: #67e8f9;">Recommended Action:</strong> <span id="diag-action">Immediate pressure test and electrical check.</span></p>
+                  <div style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                      <span style="font-size: 0.65rem; color: #94a3b8; text-transform: uppercase; display: block;">Estimated Estimate</span>
+                      <strong style="color: #34d399; font-size: 0.95rem;" id="diag-cost">$79 Diagnostic (Parts: $120 - $280)</strong>
+                    </div>
+                    <span style="background: rgba(249,115,22,0.2); color: #fb923c; border: 1px solid rgba(249,115,22,0.4); padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 0.75rem;">
+                      SUMMER50
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button type="button" class="btn" style="flex: 1; background: #ffffff; color: #c2410c;" onclick="bookDiagnosticFinding()">
+                  📅 Book Confirmed Dispatch &rarr;
+                </button>
+                <button type="button" class="btn" style="background: rgba(0,0,0,0.3); color: #fed7aa;" onclick="resetTroubleshooter()">
+                  🔄 Test Another Issue
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 12px; margin-top: 20px; display: flex; justify-content: space-between; font-size: 0.75rem; color: #fed7aa;">
+            <span>🛡️ Zero Obligation Phone Estimate</span>
+            <span>EPA Lic #98231</span>
+          </div>
+        </div>
+
+        <!-- Right: SEER Calculator -->
+        <div class="widget-box widget-seer" id="seer">
+          <div>
+            <div class="widget-header">
+              <div class="widget-icon-box">⚡</div>
+              <div>
+                <h3 class="widget-title">See How Much You Can Save :)</h3>
+                <p class="widget-sub">High-efficiency SEER2 heat pump &amp; AC energy auditor</p>
+              </div>
+            </div>
+
+            <div class="seer-stat-display">
+              <div class="flex flex-col items-center">
+                <div class="seer-circle" id="seer-pct-box">44%</div>
+                <span style="font-size: 0.7rem; font-weight: 800; color: #64748b; text-transform: uppercase; margin-top: 4px;">Efficiency Gain</span>
+              </div>
+              <div class="seer-savings-text" style="text-align: right;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #64748b; text-transform: uppercase; display: block;">You Are Saving</span>
+                <strong id="seer-dollar-box">$2,489.00</strong>
+                <span class="seer-savings-tag">5 Year Electric Savings</span>
+              </div>
+            </div>
+
+            <div class="seer-input-grid">
+              <div class="seer-control-box">
+                <label>Cents per kWh</label>
+                <input type="number" id="seer-kwh-rate" value="18" min="8" max="35" oninput="calculateSeer()" />
+              </div>
+              <div class="seer-control-box">
+                <label>Select Tons</label>
+                <select id="seer-tonnage" onchange="calculateSeer()">
+                  <option value="2">2.0 Tons (1,000-1,300 sq ft)</option>
+                  <option value="2.5">2.5 Tons (1,300-1,600 sq ft)</option>
+                  <option value="3">3.0 Tons (1,600-1,900 sq ft)</option>
+                  <option value="3.5" selected>3.5 Tons (1,900-2,300 sq ft)</option>
+                  <option value="4">4.0 Tons (2,300-2,700 sq ft)</option>
+                  <option value="5">5.0 Tons (2,700-3,300+ sq ft)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="seer-stepper-grid">
+              <div class="stepper-card">
+                <div style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: #e0f2fe;">My Current SEER</div>
+                <div class="stepper-val-wrap">
+                  <span class="stepper-num" id="current-seer-val">10</span>
+                  <div class="stepper-btn-group">
+                    <button class="step-btn" onclick="adjustSeer('current', 1)">▲</button>
+                    <button class="step-btn" onclick="adjustSeer('current', -1)">▼</button>
+                  </div>
+                </div>
+                <div style="font-size: 0.65rem; color: #bae6fd;">Older Standard (8-14)</div>
+              </div>
+
+              <div class="stepper-card">
+                <div style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: #e0f2fe;">New High SEER2</div>
+                <div class="stepper-val-wrap">
+                  <span class="stepper-num" id="new-seer-val">18</span>
+                  <div class="stepper-btn-group">
+                    <button class="step-btn" onclick="adjustSeer('new', 2)">▲</button>
+                    <button class="step-btn" onclick="adjustSeer('new', -2)">▼</button>
+                  </div>
+                </div>
+                <div style="font-size: 0.65rem; color: #bae6fd;">High Efficiency (16-24)</div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-dark" style="width: 100%;" onclick="goToFunnel('SYSTEM500')">
+              🏷️ Claim $500 New System Rebate &rarr;
+            </button>
+          </div>
+
+          <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 12px; margin-top: 16px; text-align: center; font-size: 0.7rem; color: #e0f2fe;">
+            Costs based on 2,800 annual cooling hours • Local utility energy rebate eligible
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SERVICES -->
+  <section class="ghl-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Expert Residential &amp; Commercial Solutions</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-desc">Backed by EPA-certified technicians, transparent flat-rate pricing, and fully equipped mobile dispatch units.</p>
+      </div>
+
+      <div class="services-grid-container" id="services-cards-grid">
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="AC Installation" class="service-img" />
+            <div class="service-price-tag">$500 OFF Install</div>
+          </div>
+          <div class="service-content">
+            <div>
+              <h3>AC Installation</h3>
+              <p>A quality cooling system keeps you comfortable in the hottest temps and saves you money through high SEER2 efficiency.</p>
+              <ul class="service-bullets">
+                <li><span style="color: var(--emerald);">✓</span> Free in-home energy audit</li>
+                <li><span style="color: var(--emerald);">✓</span> Load calculation included</li>
+                <li><span style="color: var(--emerald);">✓</span> Up to 10-year parts warranty</li>
+              </ul>
+            </div>
+            <div class="service-actions">
+              <button type="button" class="btn" style="padding: 6px 10px; font-size: 0.75rem; color: var(--primary); background: transparent;" onclick="openServiceModal('ac-installation')">
+                (Read More) &rarr;
+              </button>
+              <button type="button" class="btn btn-orange" style="padding: 8px 16px; font-size: 0.8rem; min-height: 38px;" onclick="goToFunnel('SYSTEM500')">
+                Schedule
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="AC Repair" class="service-img" />
+            <div class="service-price-tag">$79 Diagnostic</div>
+          </div>
+          <div class="service-content">
+            <div>
+              <h3>AC Repair</h3>
+              <p>Universal capacitors, fan motors, contactors, and refrigerant on board to solve 95% of issues in a single visit.</p>
+              <ul class="service-bullets">
+                <li><span style="color: var(--emerald);">✓</span> Same-day emergency dispatch</li>
+                <li><span style="color: var(--emerald);">✓</span> Fixed-right guarantee</li>
+                <li><span style="color: var(--emerald);">✓</span> Zero hidden overtime fees</li>
+              </ul>
+            </div>
+            <div class="service-actions">
+              <button type="button" class="btn" style="padding: 6px 10px; font-size: 0.75rem; color: var(--primary); background: transparent;" onclick="openServiceModal('ac-repair')">
+                (Read More) &rarr;
+              </button>
+              <button type="button" class="btn btn-orange" style="padding: 8px 16px; font-size: 0.8rem; min-height: 38px;" onclick="goToFunnel('SUMMER50')">
+                Schedule
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80" alt="AC Maintenance" class="service-img" />
+            <div class="service-price-tag">$99 Tune-Up</div>
+          </div>
+          <div class="service-content">
+            <div>
+              <h3>AC Maintenance</h3>
+              <p>Prevent 85% of unexpected summer breakdowns, clean condenser coils, and maximize airflow throughout your home.</p>
+              <ul class="service-bullets">
+                <li><span style="color: var(--emerald);">✓</span> 21-point safety inspection</li>
+                <li><span style="color: var(--emerald);">✓</span> Refrigerant pressure checks</li>
+                <li><span style="color: var(--emerald);">✓</span> Condensate drain flush</li>
+              </ul>
+            </div>
+            <div class="service-actions">
+              <button type="button" class="btn" style="padding: 6px 10px; font-size: 0.75rem; color: var(--primary); background: transparent;" onclick="openServiceModal('ac-maintenance')">
+                (Read More) &rarr;
+              </button>
+              <button type="button" class="btn btn-orange" style="padding: 8px 16px; font-size: 0.8rem; min-height: 38px;" onclick="goToFunnel('TUNE21')">
+                Schedule
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. MAINTENANCE PLAN BENEFITS -->
+  <section class="ghl-maintenance-section" id="maintenance">
+    <div class="container">
+      <div class="section-header" style="color: #ffffff;">
+        <h2 class="section-title" style="color: #ffffff;">Maintenance Plan Benefits</h2>
+        <p style="color: #bae6fd; font-size: 1rem;">Yearly Maintenance Agreement Includes Two Comprehensive System Visits</p>
+      </div>
+
+      <div class="benefits-matrix">
+        <div class="benefit-card"><div class="benefit-icon-box">💲</div><span>Saves money on monthly utility bills</span></div>
+        <div class="benefit-card"><div class="benefit-icon-box">💨</div><span>Helps maximize whole-house airflow</span></div>
+        <div class="benefit-card"><div class="benefit-icon-box">🛡️</div><span>Safer operation with carbon monoxide checks</span></div>
+        <div class="benefit-card"><div class="benefit-icon-box">⚙️</div><span>System runs significantly more efficient</span></div>
+        <div class="benefit-card"><div class="benefit-icon-box">⚠️</div><span>Helps prevent costly emergency breakdowns</span></div>
+        <div class="benefit-card"><div class="benefit-icon-box">🔄</div><span>Filter changes &amp; air intake sanitation</span></div>
+        <div class="benefit-card"><div class="benefit-icon-box">😊</div><span>Improves indoor comfort &amp; humidity control</span></div>
+        <div class="benefit-card"><div class="benefit-icon-box">⏰</div><span>Helps lengthen system lifespan by 5-8 yrs</span></div>
+        <div class="benefit-card"><div class="benefit-icon-box">❤️</div><span>Peace of mind with 24/7 priority booking</span></div>
+        <div class="benefit-card"><div class="benefit-icon-box">⚡</div><span>Improves peak summer &amp; winter performance</span></div>
+        <div class="benefit-card"><div class="benefit-icon-box">📅</div><span>Automated seasonal service reminders</span></div>
+        <div class="benefit-card"><div class="benefit-icon-box">🏷️</div><span>15% Discount on all future repair parts</span></div>
+      </div>
+
+      <div class="text-center">
+        <button type="button" class="btn btn-orange" style="padding: 14px 32px; font-size: 1rem;" onclick="goToFunnel('CLUB19')">
+          Learn More &amp; Enroll ($19/mo) &rarr;
+        </button>
+        <p style="font-size: 0.75rem; color: #bae6fd; margin-top: 10px;">
+          Cancel anytime • Zero contract lock-in • Transferable to new homeowner
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CERTIFICATIONS -->
+  <section class="certifications-section">
+    <div class="container">
+      <h3 style="font-size: 1.3rem; font-weight: 900; color: var(--dark);">Certifications and Associations</h3>
+      <p style="font-size: 0.8rem; color: var(--gray-500); margin-top: 4px;">Fully licensed, insured, and verified by industry standards organizations</p>
+
+      <div class="cert-badges-wrap">
+        <div class="cert-badge-box">
+          <div class="cert-badge-icon" style="background: linear-gradient(135deg, #1d4ed8, #1e3a8a);">BBB</div>
+          <div class="cert-info"><strong>BBB Accredited</strong><span>A+ Rating</span></div>
+        </div>
+
+        <div class="cert-badge-box">
+          <div class="cert-badge-icon" style="background: linear-gradient(135deg, #334155, #0f172a);">NATE</div>
+          <div class="cert-info"><strong>NATE Certified</strong><span>Technicians</span></div>
+        </div>
+
+        <div class="cert-badge-box">
+          <div class="cert-badge-icon" style="background: linear-gradient(135deg, #059669, #065f46);">EPA</div>
+          <div class="cert-info"><strong>EPA Universal</strong><span>Section 608 Certified</span></div>
+        </div>
+
+        <div class="cert-badge-box">
+          <div class="cert-badge-icon" style="background: linear-gradient(135deg, #0284c7, #075985);">HALL</div>
+          <div class="cert-info"><strong>Greater Hall</strong><span>Chamber of Commerce</span></div>
+        </div>
+
+        <div class="cert-badge-box">
+          <div class="cert-badge-icon" style="background: linear-gradient(135deg, #06b6d4, #0284c7);">STAR</div>
+          <div class="cert-info"><strong>Energy Star</strong><span>Efficiency Partner</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. REVIEWS -->
+  <section class="ghl-section" id="reviews" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="reviews-split-grid">
+        <div class="testimonial-card">
+          <div>
+            <div class="flex justify-between items-center" style="margin-bottom: 12px;">
+              <div>
+                <h3 style="font-size: 1.4rem; font-weight: 900; color: var(--dark);">What our clients are saying</h3>
+                <div class="flex items-center gap-1" style="margin-top: 4px;">
+                  <span class="review-stars">★★★★★</span>
+                  <span style="font-size: 0.8rem; font-weight: 700; color: var(--dark);">4.9 / 5.0 (380+ Reviews)</span>
+                </div>
+              </div>
+              <span style="font-size: 2.2rem; color: var(--primary-light);">❝</span>
+            </div>
+
+            <div class="review-quote-text" id="review-comment-box">
+              "Our AC went out in the middle of a 95° heatwave on a Saturday afternoon. Apex Air had a technician at our door in 40 minutes. He diagnosed a bad capacitor, had the replacement part right on his truck, and had cold air blowing in 20 minutes. Incredible service and honest pricing!"
+            </div>
+          </div>
+
+          <div>
+            <div class="review-author">
+              <h4 id="review-name-box">Neil Meckengy <span style="font-weight: 500; color: var(--gray-500); font-size: 0.85rem;">(Buford, GA)</span></h4>
+              <span style="color: var(--primary); font-weight: 700; background: var(--primary-light); padding: 2px 8px; border-radius: 4px;" id="review-service-box">AC Emergency Repair</span>
+            </div>
+
+            <div class="flex justify-between items-center" style="border-top: 1px solid var(--gray-200); padding-top: 16px; margin-top: 16px;">
+              <span style="color: var(--emerald-dark); font-size: 0.75rem; font-weight: 700;">✓ Verified Homeowner Review</span>
+              <div class="flex gap-2">
+                <button type="button" class="btn btn-orange" style="width: 36px; height: 36px; padding: 0; min-height: 36px;" onclick="changeTestimonial(-1)">&larr;</button>
+                <button type="button" class="btn btn-orange" style="width: 36px; height: 36px; padding: 0; min-height: 36px;" onclick="changeTestimonial(1)">&rarr;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rate-tech-widget">
+          <div>
+            <div style="font-size: 2rem; margin-bottom: 8px;">👍</div>
+            <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 8px;">Rate our tech</h3>
+            <p style="font-size: 0.95rem; color: #ffedd5; line-height: 1.5;">
+              We care about making your service the best possible. Tell us how your recent heating or cooling experience with us was!
+            </p>
+          </div>
+
+          <div>
+            <button type="button" class="btn btn-cyan" style="width: 100%; text-transform: uppercase; font-weight: 900; padding: 14px;" onclick="openReviewModal()">
+              SUBMIT REVIEW
+            </button>
+            <div class="flex justify-center gap-3" style="margin-top: 14px;">
+              <button type="button" onclick="openReviewModal()" style="width: 38px; height: 38px; border-radius: 8px; background: #ffffff; border: none; font-weight: 900; color: #ea4335; cursor: pointer;">G+</button>
+              <button type="button" onclick="openReviewModal()" style="width: 38px; height: 38px; border-radius: 8px; background: #ffffff; border: none; font-weight: 900; color: #1877f2; cursor: pointer;">f</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. COUPONS -->
+  <section class="ghl-section" id="coupons">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Exclusive Seasonal Specials</span>
+        <h2 class="section-title">Seasonal Discounts &amp; Promos</h2>
+        <p class="section-desc">Click any coupon below to automatically apply the digital voucher code directly to your booking request.</p>
+      </div>
+
+      <div class="coupons-grid">
+        <div class="coupon-card">
+          <span class="coupon-tag-pill">Most Popular</span>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 900;">Diagnostic Service Call</h3>
+            <p style="font-size: 0.75rem; color: var(--gray-600); margin: 6px 0;">Complete system check and exact written repair quote.</p>
+            <div class="coupon-price-display">
+              <span style="font-size: 0.9rem; text-decoration: line-through; color: var(--gray-400); font-weight: 600;">$129</span> $79
+            </div>
+          </div>
+          <div>
+            <div class="coupon-code-box" onclick="copyCouponCode('SUMMER50')">
+              <span>CODE: <strong style="color: var(--primary);">SUMMER50</strong></span>
+              <span>📋</span>
+            </div>
+            <button type="button" class="btn btn-outline-cyan" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="goToFunnel('SUMMER50')">
+              Apply to Booking &rarr;
+            </button>
+          </div>
+        </div>
+
+        <div class="coupon-card">
+          <span class="coupon-tag-pill" style="background: var(--primary-dark);">Preventative</span>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 900;">21-Point Precision Tune-Up</h3>
+            <p style="font-size: 0.75rem; color: var(--gray-600); margin: 6px 0;">Deep coil rinse, motor calibration, and capacitor test.</p>
+            <div class="coupon-price-display">
+              <span style="font-size: 0.9rem; text-decoration: line-through; color: var(--gray-400); font-weight: 600;">$189</span> $99
+            </div>
+          </div>
+          <div>
+            <div class="coupon-code-box" onclick="copyCouponCode('TUNE21')">
+              <span>CODE: <strong style="color: var(--primary);">TUNE21</strong></span>
+              <span>📋</span>
+            </div>
+            <button type="button" class="btn btn-outline-cyan" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="goToFunnel('TUNE21')">
+              Apply to Booking &rarr;
+            </button>
+          </div>
+        </div>
+
+        <div class="coupon-card">
+          <span class="coupon-tag-pill" style="background: var(--emerald-dark);">Big Savings</span>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 900;">Full System Replacement</h3>
+            <p style="font-size: 0.75rem; color: var(--gray-600); margin: 6px 0;">Complete high-efficiency heat pump or AC system replacement.</p>
+            <div class="coupon-price-display">$500 OFF</div>
+          </div>
+          <div>
+            <div class="coupon-code-box" onclick="copyCouponCode('SYSTEM500')">
+              <span>CODE: <strong style="color: var(--primary);">SYSTEM500</strong></span>
+              <span>📋</span>
+            </div>
+            <button type="button" class="btn btn-outline-cyan" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="goToFunnel('SYSTEM500')">
+              Apply to Booking &rarr;
+            </button>
+          </div>
+        </div>
+
+        <div class="coupon-card">
+          <span class="coupon-tag-pill" style="background: var(--accent);">Instant Voucher</span>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 900;">Any Service Call Discount</h3>
+            <p style="font-size: 0.75rem; color: var(--gray-600); margin: 6px 0;">Get $25 off immediately on any standard diagnostic or repair call.</p>
+            <div class="coupon-price-display">
+              <span style="font-size: 0.9rem; text-decoration: line-through; color: var(--gray-400); font-weight: 600;">$104</span> $25 OFF
+            </div>
+          </div>
+          <div>
+            <div class="coupon-code-box" onclick="copyCouponCode('REBATE25')">
+              <span>CODE: <strong style="color: var(--primary);">REBATE25</strong></span>
+              <span>📋</span>
+            </div>
+            <button type="button" class="btn btn-outline-cyan" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="goToFunnel('REBATE25')">
+              Apply to Booking &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. TRANSPARENT PRICING -->
+  <section class="ghl-section" style="background: var(--gray-50);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill" style="background: var(--accent-light); color: var(--accent-hover);">No Surprises • Zero Hidden Overtime</span>
+        <h2 class="section-title">100% Transparent Pricing</h2>
+        <p class="section-desc">You approve the exact itemized written cost before any technician turns a wrench.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="text-center" style="border-bottom: 1px solid var(--gray-100); padding-bottom: 20px;">
+            <h3 style="font-size: 1.25rem; font-weight: 800;">Diagnostic &amp; Inspection</h3>
+            <div style="margin-top: 10px;">
+              <span class="price-num">$79</span>
+              <span style="font-size: 0.85rem; color: var(--gray-500);">flat rate</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><span style="color: var(--emerald);">✓</span> Comprehensive system troubleshooting</li>
+            <li><span style="color: var(--emerald);">✓</span> Refrigerant leak detection check</li>
+            <li><span style="color: var(--emerald);">✓</span> Written itemized upfront quote</li>
+            <li><span style="color: var(--emerald);">✓</span> Fee waived 100% if repair is approved</li>
+            <li><span style="color: var(--emerald);">✓</span> Same-day dispatch window</li>
+          </ul>
+          <button type="button" class="btn btn-dark" style="width: 100%;" onclick="goToFunnel('SUMMER50')">
+            Select Diagnostic &rarr;
+          </button>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="featured-tag">Best Value</div>
+          <div class="text-center" style="border-bottom: 1px solid var(--gray-100); padding-bottom: 20px;">
+            <h3 style="font-size: 1.25rem; font-weight: 800;">Precision Tune-Up</h3>
+            <div style="margin-top: 10px;">
+              <span class="price-num" style="color: var(--primary);">$99</span>
+              <span style="font-size: 0.85rem; color: var(--gray-500);">flat rate</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><span style="color: var(--emerald);">✓</span> 21-Point comprehensive safety inspection</li>
+            <li><span style="color: var(--emerald);">✓</span> Chemical condenser coil wash</li>
+            <li><span style="color: var(--emerald);">✓</span> Drain line clearing &amp; tablet treatment</li>
+            <li><span style="color: var(--emerald);">✓</span> Electrical contactor &amp; capacitor testing</li>
+            <li><span style="color: var(--emerald);">✓</span> Thermostat calibration &amp; airflow test</li>
+          </ul>
+          <button type="button" class="btn btn-orange" style="width: 100%;" onclick="goToFunnel('TUNE21')">
+            Select Tune-Up &rarr;
+          </button>
+        </div>
+
+        <div class="pricing-card">
+          <div class="text-center" style="border-bottom: 1px solid var(--gray-100); padding-bottom: 20px;">
+            <h3 style="font-size: 1.25rem; font-weight: 800;">Comfort Club Membership</h3>
+            <div style="margin-top: 10px;">
+              <span class="price-num">$19</span>
+              <span style="font-size: 0.85rem; color: var(--gray-500);">/month</span>
+            </div>
+          </div>
+          <ul class="pricing-features">
+            <li><span style="color: var(--emerald);">✓</span> 2 Full multi-point tune-ups per year</li>
+            <li><span style="color: var(--emerald);">✓</span> 15% Discount on all repairs and parts</li>
+            <li><span style="color: var(--emerald);">✓</span> Priority VIP emergency dispatch</li>
+            <li><span style="color: var(--emerald);">✓</span> Zero overtime or weekend charges</li>
+            <li><span style="color: var(--emerald);">✓</span> Extended 2-year warranty on repairs</li>
+          </ul>
+          <button type="button" class="btn btn-dark" style="width: 100%;" onclick="goToFunnel('CLUB19')">
+            Join Comfort Club &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. SIDE-BY-SIDE FINAL CALL TO ACTION & EMBEDDED LEAD FORM -->
+  <section class="ghl-cta-section" id="book">
+    <div class="container">
+      <div class="cta-split-grid">
+        
+        <!-- Left Column: Value & Direct Phone Contact -->
+        <div class="cta-left-content">
+          <div class="hero-pill" style="margin-bottom: 18px;">
+            <span>✨</span> Exclusive Promo: $25 OFF Any Service Call Applied
+          </div>
+
+          <h2 class="cta-card-title">
+            Ready for Fast, Reliable <br />
+            <span style="color: #38bdf8;">Heating &amp; Air Comfort?</span>
+          </h2>
+
+          <p class="cta-card-sub">
+            Schedule your service or request a free estimate in 60 seconds. Our EPA-certified technicians arrive fully equipped with universal parts to solve 95% of issues on the spot.
+          </p>
+
+          <div class="cta-phone-callout">
+            <div>
+              <span style="font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--gray-400); letter-spacing: 0.05em; display: block;">
+                Need Immediate Emergency Help?
+              </span>
+              <span style="font-size: 0.8rem; color: #cbd5e1;">
+                Live Dispatch desk on call 24 hours / 7 days
+              </span>
+            </div>
+
+            <a href="tel:7709677910" class="btn btn-dark" style="font-size: 0.9rem; padding: 10px 18px; border: 1.5px solid var(--gray-700); color: #fdba74; font-weight: 900; white-space: nowrap;">
+              📞 (770) 967-7910
+            </a>
+          </div>
+
+          <div class="cta-trust-grid-2col">
+            <div class="cta-trust-badge"><span style="color: #34d399; font-weight: 900;">✓</span> 100% Upfront Quotes</div>
+            <div class="cta-trust-badge"><span style="color: #38bdf8; font-weight: 900;">✓</span> Same-Day Dispatch</div>
+            <div class="cta-trust-badge"><span style="color: #34d399; font-weight: 900;">✓</span> Fixed-Right Guarantee</div>
+            <div class="cta-trust-badge"><span style="color: #fb923c; font-weight: 900;">✓</span> EPA Universal Techs</div>
+          </div>
+        </div>
+
+        <!-- Right Column: Embedded LeadConnector Form -->
+        <div>
+          <div class="form-embed-card">
+            <div class="form-card-header">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.2rem;">📝</span>
+                <div>
+                  <h3 style="font-size: 1rem; font-weight: 800; color: #ffffff;">Fast Service Request</h3>
+                  <p style="font-size: 0.72rem; color: var(--gray-400);">Get a fast diagnostic &amp; estimate</p>
+                </div>
+              </div>
+              <span style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.7rem; font-weight: 800; padding: 3px 10px; border-radius: var(--radius-full); text-transform: uppercase;">
+                $25 OFF Applied
+              </span>
+            </div>
+
+            <!-- LeadConnector Form Iframe -->
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/IuF3GzzPgFkaOQzsZzXC"
+              style="width:100%;height:100%;min-height:584px;border:none;border-radius:8px;background:transparent;"
+              id="inline-IuF3GzzPgFkaOQzsZzXC" 
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="HVAC Lead Capture Form for website"
+              data-height="584"
+              data-layout-iframe-id="inline-IuF3GzzPgFkaOQzsZzXC"
+              data-form-id="IuF3GzzPgFkaOQzsZzXC"
+              title="HVAC Lead Capture Form for website">
+            </iframe>
+            <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+            <div style="text-align: center; font-size: 0.72rem; color: var(--gray-400); margin-top: 10px;">
+              🔒 256-Bit Encrypted • No Spam Guarantee • Instant Dispatch Sync
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. FOOTER - Spacious Balanced 2-Column Grid -->
+  <footer class="ghl-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Left: Company Info -->
+        <div>
+          <div class="flex items-center gap-2" style="margin-bottom: 8px;">
+            <div style="width: 34px; height: 34px; border-radius: 8px; background: var(--primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.1rem;">❄️</div>
+            <span style="font-size: 1.5rem; font-weight: 900; color: #ffffff;">APEX<span style="color: var(--primary);">AIR</span></span>
+          </div>
+          <p style="color: var(--accent); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 18px;">
+            Heating &amp; Air Conditioning Specialists
+          </p>
+          
+          <div style="display: grid; grid-template-columns: 1fr; gap: 12px; font-size: 0.85rem; color: var(--gray-300); margin-bottom: 20px;">
+            <p>📍 <strong>Buford GA Location:</strong> 7035 Evergreen Way, Buford, GA 30518</p>
+            <p>📞 <strong>Direct Dispatch:</strong> <a href="tel:7709677910" style="color: #ffffff; font-weight: 900;">(770) 967-7910</a></p>
+            <p>✉️ <strong>Email Support:</strong> dispatch@apexair.com</p>
+            <p>⏰ <strong>Emergency Coverage:</strong> 24 Hours / 7 Days a Week</p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid var(--gray-700); padding: 12px 16px; border-radius: var(--radius-md); font-size: 0.75rem; color: #34d399; line-height: 1.5;">
+            ✔ GA HVAC Master Lic #HVAC-98231 • EPA Universal Section 608 Verified Contractor • Fully Insured &amp; Bonded
+          </div>
+        </div>
+
+        <!-- Right: Quick Navigation & Services Populating Full Space -->
+        <div>
+          <h4 style="color: #ffffff; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">
+            Quick Navigation &amp; Services
+          </h4>
+
+          <div class="footer-link-grid">
+            <a href="#services" class="footer-nav-card">
+              <span style="color: var(--primary); font-weight: 900;">&rarr;</span>
+              <span>AC Installation &amp; Replacement</span>
+            </a>
+            <a href="#services" class="footer-nav-card">
+              <span style="color: var(--primary); font-weight: 900;">&rarr;</span>
+              <span>AC &amp; Furnace Emergency Repair</span>
+            </a>
+            <a href="#seer" class="footer-nav-card">
+              <span style="color: #34d399; font-weight: 900;">&rarr;</span>
+              <span>SEER2 Energy Savings Auditor</span>
+            </a>
+            <a href="#maintenance" class="footer-nav-card">
+              <span style="color: var(--primary); font-weight: 900;">&rarr;</span>
+              <span>Comfort Club Maintenance</span>
+            </a>
+            <button type="button" class="footer-nav-card" style="border-color: rgba(249,115,22,0.4); background: rgba(249,115,22,0.15); color: #fb923c; font-weight: 800; width: 100%; text-align: left; cursor: pointer;" onclick="goToFunnel('REBATE25')">
+              <span>📅</span>
+              <span>Schedule Service ($25 OFF)</span>
+            </button>
+            <a href="tel:7709677910" class="footer-nav-card" style="border-color: rgba(6,182,212,0.4); background: rgba(6,182,212,0.15); color: #67e8f9; font-weight: 800;">
+              <span>📞</span>
+              <span>24/7 Emergency Dispatch</span>
+            </a>
+          </div>
+
+          <p style="font-size: 0.75rem; color: var(--gray-500); margin-top: 20px; line-height: 1.5;">
+            Serving Buford, Flowery Branch, Gainesville, Sugar Hill, Suwanee, Cumming, Braselton, and all surrounding Hall &amp; Gwinnett County communities.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="flex justify-between items-center flex-wrap gap-4" style="padding-top: 24px; font-size: 0.75rem; color: var(--gray-500);">
+        <p>&copy; 2026 Apex Air Solutions. All rights reserved. Licensed, Bonded &amp; Insured HVAC Contractors.</p>
+        <div class="flex gap-4">
+          <a href="#" style="color: var(--gray-400);">Privacy Policy</a>
+          <a href="#" style="color: var(--gray-400);">Terms of Service</a>
+          <a href="#" style="color: var(--gray-400);">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BOTTOM BAR -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:7709677910" class="btn btn-dark" style="background: var(--dark);">📞 Call Now</a>
+    <button type="button" class="btn btn-orange" style="flex: 1;" onclick="goToFunnel('REBATE25')">📅 Book ($25 OFF)</button>
+  </div>
+
+  <!-- SERVICE MODAL -->
+  <div class="modal-backdrop" id="serviceModal">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn" onclick="closeServiceModal()">✕</button>
+      <div style="height: 220px; position: relative;">
+        <img src="" id="modal-service-img" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
+        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(15,23,42,0.85) 0%, transparent 100%); display: flex; align-items: flex-end; padding: 20px;">
+          <div>
+            <span id="modal-service-tag" style="background: var(--accent); color: #fff; font-size: 0.75rem; font-weight: 800; padding: 3px 8px; border-radius: 4px;"></span>
+            <h3 id="modal-service-title" style="font-size: 1.4rem; font-weight: 900; color: #ffffff; margin-top: 4px;"></h3>
+          </div>
+        </div>
+      </div>
+      <div style="padding: 24px;">
+        <h4 style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: var(--primary); margin-bottom: 6px;">Service Overview</h4>
+        <p id="modal-service-desc" style="font-size: 0.9rem; color: var(--gray-700); line-height: 1.6; margin-bottom: 20px;"></p>
+        
+        <div style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: 16px; margin-bottom: 20px;">
+          <h5 style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: var(--dark); margin-bottom: 8px;">What's Included:</h5>
+          <ul id="modal-service-highlights" style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.8rem; color: var(--gray-700);"></ul>
+        </div>
+
+        <div class="flex gap-3">
+          <button type="button" id="modal-service-book-btn" class="btn btn-orange" style="flex: 1;" onclick="closeServiceModal(); goToFunnel('SYSTEM500');">
+            📅 Book This Service Now
+          </button>
+          <a href="tel:7709677910" class="btn btn-dark">
+            📞 Call (770) 967-7910
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEW MODAL -->
+  <div class="modal-backdrop" id="reviewModal">
+    <div class="modal-box" style="padding: 32px; text-align: center;">
+      <button type="button" class="modal-close-btn" onclick="closeReviewModal()">✕</button>
+      
+      <div id="review-form-view">
+        <div style="font-size: 2.2rem; margin-bottom: 10px;">👍</div>
+        <h3 style="font-size: 1.35rem; font-weight: 900; color: var(--dark); margin-bottom: 6px;">Rate Your HVAC Tech</h3>
+        <p style="font-size: 0.8rem; color: var(--gray-500); margin-bottom: 20px;">
+          Tap a star below to rate your recent service experience with Apex Air.
+        </p>
+
+        <div style="font-size: 2.2rem; color: #f59e0b; cursor: pointer; letter-spacing: 6px; margin-bottom: 24px; padding: 10px; background: var(--gray-50); border-radius: var(--radius-md);" id="star-rating-selector">
+          <span onclick="setStarRating(1)">★</span><span onclick="setStarRating(2)">★</span><span onclick="setStarRating(3)">★</span><span onclick="setStarRating(4)">★</span><span onclick="setStarRating(5)">★</span>
+        </div>
+
+        <button type="button" class="btn btn-orange" style="width: 100%; font-weight: 900; margin-bottom: 10px;" onclick="submitReviewDirect()">
+          Submit 5-Star Feedback &rarr;
+        </button>
+      </div>
+
+      <div id="review-success-view" style="display: none; text-align: center; padding: 20px 0;">
+        <div style="font-size: 3rem; margin-bottom: 12px;">🎉</div>
+        <h3 style="font-size: 1.4rem; font-weight: 900; color: var(--dark); margin-bottom: 8px;">Thank You!</h3>
+        <p style="font-size: 0.9rem; color: var(--gray-600); line-height: 1.5; margin-bottom: 20px;">
+          Your feedback has been recorded. Our team deeply appreciates your support.
+        </p>
+        <button type="button" class="btn btn-dark" onclick="closeReviewModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ==========================================================================
+    // GOHIGHLEVEL FUNNEL DESTINATION LINK
+    // Replace with your live GHL Booking Page URL (or Step 2 URL):
+    // ==========================================================================
+    const GHL_FUNNEL_URL = 'https://sites.leadconnectorhq.com/preview/DKT8dL32Yg2c9cZ1It20?notrack=true';
+
+    function goToFunnel(promoCode) {
+      let target = GHL_FUNNEL_URL;
+      if (promoCode) {
+        const sep = target.includes('?') ? '&' : '?';
+        target += sep + 'voucher=' + encodeURIComponent(promoCode);
+      }
+      window.open(target, '_blank');
+    }
+
+    const SERVICES_DATA = {
+      'ac-installation': {
+        title: 'AC Installation',
+        tag: '$500 OFF Install',
+        image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
+        promoCode: 'SYSTEM500',
+        desc: 'A quality cooling system keeps you comfortable in the hottest temperatures, and saves you money through proper calibration and high SEER2 ratings.',
+        highlights: ['Free in-home energy audit', 'Load calculation included', 'Up to 10-year parts warranty', '0% APR financing available']
+      },
+      'ac-repair': {
+        title: 'AC Repair',
+        tag: '$79 Diagnostic',
+        image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+        promoCode: 'SUMMER50',
+        desc: 'Our fully stocked service vans arrive with universal capacitors, fan motors, contactors, and refrigerants to solve 95% of issues in a single visit.',
+        highlights: ['Same-day emergency dispatch', 'Fixed-right guarantee', 'All makes and models serviced', 'Zero hidden overtime charges']
+      },
+      'ac-maintenance': {
+        title: 'AC Maintenance',
+        tag: '$99 Tune-Up',
+        image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80',
+        promoCode: 'TUNE21',
+        desc: 'Preventive maintenance plans ensure your equipment operates at peak efficiency, prevents unexpected breakdowns, and cleans condenser coils.',
+        highlights: ['21-point safety inspection', 'Refrigerant pressure checks', 'Condensate drain flush', 'Blower motor lubrication']
+      }
+    };
+
+    const DIAGNOSTIC_DB = {
+      'ac_warm_air': {
+        title: 'Unit Running But Blowing Warm Air',
+        possibleCause: 'Low refrigerant charge (leak), tripped compressor capacitor, or dirty outdoor condenser coil.',
+        recommendedAction: 'Immediate refrigerant pressure check and capacitor electrical test by an EPA-certified tech.',
+        estimatedCost: '$79 Diagnostic (Parts: $120 - $280)',
+        promoCode: 'SUMMER50'
+      },
+      'ac_no_power': {
+        title: 'AC System Won\'t Turn On At All',
+        possibleCause: 'Full condensate drain float switch tripped, blown disconnect fuse, or failed contactor.',
+        recommendedAction: 'Safety circuit check and clear drain pan switch.',
+        estimatedCost: '$79 Diagnostic (Parts: $95 - $220)',
+        promoCode: 'SUMMER50'
+      },
+      'ac_noises': {
+        title: 'Screeching, Banging, or Buzzing Sounds',
+        possibleCause: 'Loose blower wheel, failed fan motor bearings, or loose compressor hardware.',
+        recommendedAction: 'Shut off system immediately at thermostat to prevent physical damage.',
+        estimatedCost: '$79 Diagnostic + Precision Repair',
+        promoCode: 'SUMMER50'
+      },
+      'ac_ice': {
+        title: 'Ice Buildup on Copper Pipes or Indoor Coil',
+        possibleCause: 'Severe airflow restriction (clogged filter) or low refrigerant levels.',
+        recommendedAction: 'Turn system to "FAN ONLY" to thaw coil. Schedule tech to test refrigerant pressures.',
+        estimatedCost: '$79 Diagnostic (Voucher Applied)',
+        promoCode: 'SUMMER50'
+      },
+      'heat_no_heat': {
+        title: 'Heater/Furnace Blowing Cold Air',
+        possibleCause: 'Dirty flame sensor, cracked hot surface ignitor, or heat pump reversing valve stuck.',
+        recommendedAction: 'Clean ignition assembly and check draft inducer safety switches.',
+        estimatedCost: '$79 Diagnostic (Parts: $110 - $240)',
+        promoCode: 'SUMMER50'
+      },
+      'heat_smell': {
+        title: 'Burning Smell or Gas Odor From Vents',
+        possibleCause: 'First seasonal burn-off of dust, or hazardous cracked heat exchanger.',
+        recommendedAction: 'If sulfur/rotten egg odor, evacuate and contact gas utility. Otherwise schedule combustion inspection.',
+        estimatedCost: '$79 Diagnostic + Safety Test',
+        promoCode: 'SUMMER50'
+      },
+      'high_bills': {
+        title: 'Skyrocketing Electric Bills / Constant Running',
+        possibleCause: 'Aging low-SEER compressor (e.g. 10 SEER) or severe duct leakage.',
+        recommendedAction: 'Perform SEER Energy Audit and 21-Point Tune-Up or explore high-efficiency SEER2 replacement.',
+        estimatedCost: '$99 Tune-Up (Save up to 45% on bills)',
+        promoCode: 'TUNE21'
+      }
+    };
+
+    const TESTIMONIALS_DATA = [
+      {
+        name: 'Neil Meckengy',
+        location: 'Buford, GA',
+        service: 'AC Emergency Repair',
+        comment: 'Our AC went out in the middle of a 95° heatwave on a Saturday afternoon. Apex Air had a technician at our door in 40 minutes. He diagnosed a bad capacitor, had the replacement part right on his truck, and had cold air blowing in 20 minutes. Incredible service and honest pricing!'
+      },
+      {
+        name: 'Sarah Jenkins',
+        location: 'Flowery Branch, GA',
+        service: 'New Heat Pump Installation',
+        comment: 'Replaced our 16-year-old 10 SEER unit with a modern 18 SEER system. The energy savings calculator on their website was spot on — our power bill dropped by nearly 40%! The installation crew was polite, wore shoe covers, and left the basement cleaner than they found it.'
+      },
+      {
+        name: 'David Reynolds',
+        location: 'Gainesville, GA',
+        service: '21-Point Tune-Up',
+        comment: 'The 21-point tune-up was thorough. The tech showed me photos of dirty coils before and after cleaning and checked refrigerant levels with digital gauges. Definitely joining their annual Comfort Club!'
+      },
+      {
+        name: 'Amanda & Robert Vance',
+        location: 'Sugar Hill, GA',
+        service: 'Furnace & AC Replacement',
+        comment: 'Zero pushy sales tactics. They gave us 3 straightforward pricing tiers and explained the pros/cons of each. Highly recommend Apex Air to anyone in Hall and Gwinnett county.'
+      }
+    ];
+
+    let currentTroubleSystem = 'ac';
+    let selectedTroubleSymptom = 'ac_warm_air';
+    let currentTestimonialIdx = 0;
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      drawer.classList.toggle('open');
+    }
+
+    function setTroubleSystem(type) {
+      currentTroubleSystem = type;
+      document.getElementById('btn-toggle-ac').classList.toggle('active', type === 'ac');
+      document.getElementById('btn-toggle-heat').classList.toggle('active', type === 'heat');
+      renderTroubleSymptoms();
+    }
+
+    function renderTroubleSymptoms() {
+      const container = document.getElementById('symptom-radio-container');
+      container.innerHTML = '';
+      
+      const acSymptoms = [
+        { id: 'ac_warm_air', label: 'Blowing warm / room-temp air', badge: 'Common' },
+        { id: 'ac_no_power', label: "Unit won't turn on / completely dead", badge: 'Electrical' },
+        { id: 'ac_noises', label: 'Screeching, buzzing, or banging noises', badge: 'Urgent' },
+        { id: 'ac_ice', label: 'Ice buildup on pipes / water leaking', badge: 'Coil Frost' },
+        { id: 'high_bills', label: 'High energy bills & constant running', badge: 'Efficiency' }
+      ];
+
+      const heatSymptoms = [
+        { id: 'heat_no_heat', label: 'Furnace blowing cold air', badge: 'Ignition' },
+        { id: 'heat_smell', label: 'Burning smell or unusual odor', badge: 'Safety' },
+        { id: 'ac_no_power', label: 'Thermostat clicks but no heat', badge: 'Control' },
+        { id: 'high_bills', label: 'Aux heat constantly on / high power bill', badge: 'Heat Pump' }
+      ];
+
+      const list = currentTroubleSystem === 'ac' ? acSymptoms : heatSymptoms;
+      selectedTroubleSymptom = list[0].id;
+
+      list.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'symptom-radio-item ' + (index === 0 ? 'selected' : '');
+        div.onclick = function() {
+          document.querySelectorAll('.symptom-radio-item').forEach(el => el.classList.remove('selected'));
+          div.classList.add('selected');
+          selectedTroubleSymptom = item.id;
+        };
+        div.innerHTML = `<span>${item.label}</span><span class="symptom-badge">${item.badge}</span>`;
+        container.appendChild(div);
+      });
+    }
+
+    function goToTroubleshooterStep2() {
+      const diag = DIAGNOSTIC_DB[selectedTroubleSymptom] || DIAGNOSTIC_DB['ac_warm_air'];
+      document.getElementById('diag-title').innerText = diag.title;
+      document.getElementById('diag-cause').innerText = diag.possibleCause;
+      document.getElementById('diag-action').innerText = diag.recommendedAction;
+      document.getElementById('diag-cost').innerText = diag.estimatedCost;
+
+      document.getElementById('troubleshooter-step-1').style.display = 'none';
+      document.getElementById('troubleshooter-step-2').style.display = 'block';
+    }
+
+    function resetTroubleshooter() {
+      document.getElementById('troubleshooter-step-2').style.display = 'none';
+      document.getElementById('troubleshooter-step-1').style.display = 'block';
+    }
+
+    function bookDiagnosticFinding() {
+      const diag = DIAGNOSTIC_DB[selectedTroubleSymptom] || DIAGNOSTIC_DB['ac_warm_air'];
+      goToFunnel(diag.promoCode);
+    }
+
+    let currentSeer = 10;
+    let newSeer = 18;
+
+    function calculateSeer() {
+      const kwhRate = parseFloat(document.getElementById('seer-kwh-rate').value) || 18;
+      const tonnage = parseFloat(document.getElementById('seer-tonnage').value) || 3.5;
+      const btu = tonnage * 12000;
+      const hours = 2800;
+
+      const oldKwh = (btu / Math.max(currentSeer, 6)) * hours / 1000;
+      const oldCost = oldKwh * (kwhRate / 100);
+
+      const newKwh = (btu / Math.max(newSeer, currentSeer)) * hours / 1000;
+      const newCost = newKwh * (kwhRate / 100);
+
+      const annualSavings = Math.max(0, oldCost - newCost);
+      const fiveYearSavings = Math.round(annualSavings * 5);
+      const pct = Math.round(((newSeer - currentSeer) / newSeer) * 100);
+
+      document.getElementById('seer-pct-box').innerText = Math.max(0, pct) + '%';
+      document.getElementById('seer-dollar-box').innerText = '$' + fiveYearSavings.toLocaleString('en-US') + '.00';
+    }
+
+    function adjustSeer(type, delta) {
+      if (type === 'current') {
+        currentSeer = Math.min(16, Math.max(8, currentSeer + delta));
+        document.getElementById('current-seer-val').innerText = currentSeer;
+      } else {
+        newSeer = Math.min(24, Math.max(14, newSeer + delta));
+        document.getElementById('new-seer-val').innerText = newSeer;
+      }
+      calculateSeer();
+    }
+
+    function changeTestimonial(delta) {
+      currentTestimonialIdx = (currentTestimonialIdx + delta + TESTIMONIALS_DATA.length) % TESTIMONIALS_DATA.length;
+      const item = TESTIMONIALS_DATA[currentTestimonialIdx];
+      document.getElementById('review-comment-box').innerText = `"${item.comment}"`;
+      document.getElementById('review-name-box').innerHTML = `${item.name} <span style="font-weight: 500; color: var(--gray-500); font-size: 0.85rem;">(${item.location})</span>`;
+      document.getElementById('review-service-box').innerText = item.service;
+    }
+
+    function copyCouponCode(code) {
+      navigator.clipboard.writeText(code);
+      alert('Voucher code "' + code + '" copied to clipboard!');
+    }
+
+    function openServiceModal(serviceId) {
+      const service = SERVICES_DATA[serviceId];
+      if (!service) return;
+
+      document.getElementById('modal-service-img').src = service.image;
+      document.getElementById('modal-service-img').alt = service.title;
+      document.getElementById('modal-service-tag').innerText = service.tag;
+      document.getElementById('modal-service-title').innerText = service.title;
+      document.getElementById('modal-service-desc').innerText = service.desc;
+
+      const hlContainer = document.getElementById('modal-service-highlights');
+      hlContainer.innerHTML = '';
+      service.highlights.forEach(hl => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span style="color: var(--emerald);">✓</span> ${hl}`;
+        hlContainer.appendChild(li);
+      });
+
+      document.getElementById('modal-service-book-btn').onclick = function() {
+        closeServiceModal();
+        goToFunnel(service.promoCode);
+      };
+
+      document.getElementById('serviceModal').classList.add('open');
+    }
+
+    function closeServiceModal() {
+      document.getElementById('serviceModal').classList.remove('open');
+    }
+
+    function openReviewModal() {
+      document.getElementById('review-form-view').style.display = 'block';
+      document.getElementById('review-success-view').style.display = 'none';
+      document.getElementById('reviewModal').classList.add('open');
+    }
+
+    function closeReviewModal() {
+      document.getElementById('reviewModal').classList.remove('open');
+    }
+
+    function setStarRating(num) {
+      const spans = document.querySelectorAll('#star-rating-selector span');
+      spans.forEach((span, i) => {
+        span.style.color = (i < num) ? '#f59e0b' : '#cbd5e1';
+      });
+    }
+
+    function submitReviewDirect() {
+      document.getElementById('review-form-view').style.display = 'none';
+      document.getElementById('review-success-view').style.display = 'block';
+    }
+
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    renderTroubleSymptoms();
+    calculateSeer();
+  </script>
+</body>
+</html>

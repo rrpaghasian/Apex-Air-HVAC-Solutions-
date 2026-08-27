@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Book Your Service Window | Apex Air Solutions</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       APEX AIR SOLUTIONS - GOHIGHLEVEL BOOKING PAGE STYLES
+       ========================================================================== */
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --accent: #f97316;
+      --accent-hover: #ea580c;
+      --accent-light: #ffedd5;
+      --dark: #0f172a;
+      --dark-800: #1e293b;
+      --dark-850: #182234;
+      --dark-900: #0f172a;
+      --dark-950: #090d16;
+      --emerald: #10b981;
+      --emerald-dark: #059669;
+      --emerald-light: #d1fae5;
+      --amber: #f59e0b;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: #f8fafc;
+      color: var(--dark);
+      line-height: 1.5;
+      overflow-x: hidden;
+      padding-bottom: 74px;
+      font-family: var(--font);
+    }
+
+    @media (min-width: 769px) {
+      body { padding-bottom: 0; }
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font-family: inherit; }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    @media (min-width: 768px) {
+      .container { padding: 0 24px; }
+    }
+
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .items-center { align-items: center; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .flex-col { flex-direction: column; }
+    .flex-wrap { flex-wrap: wrap; }
+    .gap-1 { gap: 4px; }
+    .gap-2 { gap: 8px; }
+    .gap-3 { gap: 12px; }
+    .gap-4 { gap: 16px; }
+    .w-full { width: 100%; }
+    .text-center { text-align: center; }
+    .relative { position: relative; }
+    .overflow-hidden { overflow: hidden; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 800;
+      border-radius: var(--radius-md);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      white-space: nowrap;
+      user-select: none;
+      font-size: 0.95rem;
+      padding: 12px 24px;
+      min-height: 46px;
+    }
+    .btn:active { transform: scale(0.97); }
+
+    .btn-orange {
+      background-color: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+    }
+    .btn-orange:hover {
+      background-color: var(--accent-hover);
+      box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+    }
+
+    .btn-cyan {
+      background-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+    }
+    .btn-cyan:hover {
+      background-color: var(--primary-dark);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+    }
+
+    .btn-dark {
+      background-color: var(--dark);
+      color: #ffffff;
+    }
+    .btn-dark:hover { background-color: var(--dark-950); }
+
+    /* 1. TOP BAR */
+    .ghl-topbar {
+      background-color: var(--dark);
+      color: var(--gray-300);
+      font-size: 0.8rem;
+      border-bottom: 1px solid var(--dark-800);
+      padding: 8px 0;
+      position: relative;
+      z-index: 50;
+    }
+    .ghl-topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .dispatch-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #ea580c;
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+    }
+
+    /* 2. HEADER */
+    .ghl-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      box-shadow: var(--shadow-sm);
+    }
+    .ghl-nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .brand-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #06b6d4 0%, #1d4ed8 100%);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(6, 182, 212, 0.25);
+    }
+    .brand-name {
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+      line-height: 1;
+    }
+    .brand-name span { color: var(--primary); }
+    .brand-sub {
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-top: 3px;
+    }
+
+    .funnel-step-badge {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-light);
+      border: 1px solid rgba(2, 132, 199, 0.25);
+      color: var(--primary-dark);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+    @media (min-width: 768px) {
+      .funnel-step-badge { display: inline-flex; }
+    }
+
+    .nav-phone-block {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .nav-phone-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .nav-phone-num {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* 3. HERO */
+    .booking-hero {
+      background: linear-gradient(180deg, #090d16 0%, #0f172a 60%, #1e293b 100%);
+      color: #ffffff;
+      padding: 44px 0 50px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .hero-ambient-glow {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, rgba(0,0,0,0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .promo-applied-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(249, 115, 22, 0.2);
+      border: 1px solid rgba(249, 115, 22, 0.4);
+      color: #fdba74;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      margin-bottom: 16px;
+      backdrop-filter: blur(8px);
+    }
+    .booking-hero-title {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .booking-hero-sub {
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: var(--gray-300);
+      max-width: 680px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+
+    /* 3-STEP TIMELINE */
+    .timeline-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 780px;
+      margin: 0 auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .step-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gray-400);
+    }
+    .step-item.active { color: #38bdf8; }
+    .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 900;
+      background: rgba(255,255,255,0.1);
+      color: #cbd5e1;
+      flex-shrink: 0;
+    }
+    .step-item.active .step-num {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(2, 132, 199, 0.5);
+    }
+
+    /* 4. MAIN BOOKING SECTION */
+    .booking-main-section { padding: 40px 0 70px; }
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    @media (min-width: 992px) {
+      .booking-grid { grid-template-columns: 1fr 380px; }
+    }
+
+    .calendar-container-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-xl);
+      overflow: hidden;
+    }
+    .calendar-card-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .calendar-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .calendar-tag {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+    }
+    .calendar-embed-frame-wrap {
+      padding: 16px;
+      background: #ffffff;
+      min-height: 640px;
+    }
+    @media (min-width: 768px) {
+      .calendar-embed-frame-wrap { padding: 24px; }
+    }
+    .calendar-security-footer {
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gray-600);
+    }
+
+    .booking-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .sidebar-card {
+      background: #ffffff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-md);
+    }
+    .sidebar-card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .trust-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .trust-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: var(--gray-700);
+      line-height: 1.4;
+    }
+    .trust-check-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--emerald-light);
+      color: var(--emerald-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .tech-status-box {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      border: 1px solid var(--gray-700);
+    }
+    .tech-status-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .tech-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .tech-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 2px solid var(--primary);
+      flex-shrink: 0;
+    }
+
+    .emergency-call-card {
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .emergency-title {
+      font-size: 1.1rem;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+    .emergency-sub {
+      font-size: 0.8rem;
+      color: #ffedd5;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    /* 5. JOURNEY */
+    .journey-section {
+      background: #ffffff;
+      border-top: 1px solid var(--gray-200);
+      padding: 60px 0;
+    }
+    .journey-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 36px;
+    }
+    @media (min-width: 768px) {
+      .journey-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .journey-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      position: relative;
+    }
+    .journey-step-num {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--gray-300);
+      line-height: 1;
+    }
+    .journey-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+    }
+    .journey-card h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .journey-card p {
+      font-size: 0.85rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border-top: 1px solid var(--gray-200);
+      padding: 10px 16px;
+      z-index: 999;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.1);
+      gap: 10px;
+    }
+    @media (max-width: 768px) {
+      .mobile-sticky-bar { display: flex; }
+    }
+    .mobile-sticky-bar a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 8px;
+      border-radius: var(--radius-md);
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. TOP BAR -->
+  <div class="ghl-topbar">
+    <div class="container">
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="dispatch-badge">
+          <span class="pulse-dot"></span>
+          Live Dispatch
+        </span>
+        <span style="color: #cbd5e1; font-weight: 600;">Technicians available in Buford &amp; Hall County today.</span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <span>⏰ 24/7 Immediate Help:</span>
+        <a href="tel:7709677910" style="color: #ffffff; font-weight: 900; white-space: nowrap;">📞 (770) 967-7910</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. NAVBAR -->
+  <header class="ghl-header">
+    <div class="container">
+      <nav class="ghl-nav">
+        <a href="#" class="brand-logo" onclick="window.history.back(); return false;" title="Return to Main Funnel">
+          <div class="brand-icon-box">
+            <span style="font-size: 1.3rem;">❄️</span>
+          </div>
+          <div>
+            <div class="brand-name">APEX<span>AIR</span></div>
+            <div class="brand-sub">Heating &amp; Air Solutions</div>
+          </div>
+        </a>
+
+        <div class="funnel-step-badge">
+          <span>📅</span>
+          <span>Step 2 of 2: Select Date &amp; Service Window</span>
+        </div>
+
+        <div class="nav-phone-block">
+          <span class="nav-phone-label">Need Assistance? Call Dispatch</span>
+          <a href="tel:7709677910" class="nav-phone-num">
+            <span>📞</span> (770) 967-7910
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 3. HERO / VALUE FRAMING -->
+  <section class="booking-hero">
+    <div class="hero-ambient-glow"></div>
+    <div class="container relative">
+      <div class="promo-applied-pill">
+        <span>✨</span>
+        <span>Exclusive Voucher Active: $25 OFF Service Call / $500 System Rebate Applied</span>
+      </div>
+
+      <h1 class="booking-hero-title">
+        Schedule Your Service Window Online
+      </h1>
+
+      <p class="booking-hero-sub">
+        Choose your preferred date and arrival time below. Our EPA-certified technicians arrive fully equipped in mobile warehouse vans to fix 95% of issues in a single visit.
+      </p>
+
+      <!-- 3-Step Progress Timeline with Email Confirmation -->
+      <div class="timeline-steps">
+        <div class="step-item active">
+          <div class="step-num">1</div>
+          <span>Select Date &amp; Time</span>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <span>Instant Email Confirmation</span>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <span>Track Tech's Arrival</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. MAIN CALENDAR & SIDEBAR SECTION -->
+  <main class="booking-main-section">
+    <div class="container">
+      <div class="booking-grid">
+        
+        <!-- Primary Left Column: LeadConnector Interactive Calendar Embed -->
+        <div class="calendar-container-card">
+          <div class="calendar-card-header">
+            <div class="calendar-title">
+              <span>📅</span>
+              <span>Available Arrival Windows</span>
+            </div>
+            <span class="calendar-tag">Zero Upfront Charge</span>
+          </div>
+
+          <div class="calendar-embed-frame-wrap">
+            <!-- LeadConnector / GoHighLevel Calendar Embed -->
+            <iframe 
+              src="https://api.leadconnectorhq.com/widget/booking/331duRk87cPbrOJ3SYJC" 
+              allow="payment" 
+              style="width: 100%; min-height: 680px; border:none; overflow: hidden;" 
+              scrolling="no" 
+              id="331duRk87cPbrOJ3SYJC_1787475969881">
+            </iframe>
+            <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+          </div>
+
+          <div class="calendar-security-footer">
+            <div class="flex items-center gap-1">
+              <span style="color: var(--emerald);">🔒</span>
+              <span>256-Bit Encrypted Booking</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <span style="color: var(--primary);">✓</span>
+              <span>Free Cancellation &amp; Rescheduling</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <span style="color: var(--accent);">✓</span>
+              <span>Zero Hidden Overtime Charges</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Right Column: High-Trust Conversion Sidebar -->
+        <aside class="booking-sidebar">
+          
+          <!-- Trust Checkpoints -->
+          <div class="sidebar-card">
+            <h3 class="sidebar-card-title">
+              <span>🛡️</span>
+              <span>The Apex Air Promise</span>
+            </h3>
+
+            <ul class="trust-checklist">
+              <li class="trust-check-item">
+                <div class="trust-check-icon">✓</div>
+                <div>
+                  <strong style="color: var(--dark); display: block;">100% Upfront Written Quotes</strong>
+                  <span>No surprises or hidden fees. You approve the price before we start.</span>
+                </div>
+              </li>
+
+              <li class="trust-check-item">
+                <div class="trust-check-icon">✓</div>
+                <div>
+                  <strong style="color: var(--dark); display: block;">1-Year Fixed-Right Guarantee</strong>
+                  <span>If any repair fails within 12 months, we fix it at zero additional cost.</span>
+                </div>
+              </li>
+
+              <li class="trust-check-item">
+                <div class="trust-check-icon">✓</div>
+                <div>
+                  <strong style="color: var(--dark); display: block;">EPA &amp; NATE Certified Techs</strong>
+                  <span>Background-checked, drug-tested, master-licensed HVAC specialists.</span>
+                </div>
+              </li>
+
+              <li class="trust-check-item">
+                <div class="trust-check-icon">✓</div>
+                <div>
+                  <strong style="color: var(--dark); display: block;">Fully Stocked Service Vans</strong>
+                  <span>Universal capacitors, fan motors, contactors, and refrigerants on board.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- On-Duty Dispatch Status -->
+          <div class="tech-status-box">
+            <div class="tech-status-header">
+              <div class="flex items-center gap-2">
+                <span class="pulse-dot" style="background-color: #34d399;"></span>
+                <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #34d399; letter-spacing: 0.05em;">
+                  Active Dispatch Team
+                </span>
+              </div>
+              <span style="font-size: 0.7rem; color: var(--gray-400);">Buford / Hall Co.</span>
+            </div>
+
+            <div class="tech-row">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=150&q=80" alt="Apex Air Technician" class="tech-avatar" />
+              <div>
+                <h4 style="font-size: 0.95rem; font-weight: 800; color: #ffffff;">Mike R. (Lead Tech)</h4>
+                <div style="color: #f59e0b; font-size: 0.8rem; margin: 2px 0;">★★★★★ <span style="color: #cbd5e1; font-weight: 700;">4.9 (380+ reviews)</span></div>
+                <p style="font-size: 0.75rem; color: var(--gray-300);">95% same-day repair completion rate</p>
+              </div>
+            </div>
+
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 8px 12px; font-size: 0.75rem; color: #bae6fd; text-align: center;">
+              ⚡ Avg arrival response: <strong>45 minutes</strong> from dispatch call
+            </div>
+          </div>
+
+          <!-- Direct Emergency Call Box -->
+          <div class="emergency-call-card">
+            <div style="font-size: 1.8rem; margin-bottom: 6px;">⏰</div>
+            <h3 class="emergency-title">Need Immediate Help?</h3>
+            <p class="emergency-sub">
+              If your AC or heater is completely down in extreme temperatures, skip the calendar and call our 24/7 priority line directly.
+            </p>
+            <a href="tel:7709677910" class="btn btn-dark" style="width: 100%; font-size: 0.95rem; font-weight: 900; background: var(--dark-950);">
+              📞 (770) 967-7910
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- 5. HOW ONLINE BOOKING WORKS (Email Confirmation) -->
+  <section class="journey-section">
+    <div class="container">
+      <div class="text-center" style="max-width: 620px; margin: 0 auto;">
+        <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--primary); background: var(--primary-light); padding: 4px 12px; border-radius: var(--radius-full);">
+          Seamless Experience
+        </span>
+        <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.3rem); font-weight: 900; color: var(--dark); margin-top: 8px; letter-spacing: -0.02em;">
+          What Happens After You Book?
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--gray-600); margin-top: 8px;">
+          Here is what you can expect from our team from the moment you confirm your time window:
+        </p>
+      </div>
+
+      <div class="journey-grid">
+        <div class="journey-card">
+          <div class="journey-step-num">01</div>
+          <div class="journey-icon">✉️</div>
+          <h4>Instant Email Confirmation</h4>
+          <p>You will receive an immediate automated email message with your appointment time, booking details, and digital voucher confirmation.</p>
+        </div>
+
+        <div class="journey-card">
+          <div class="journey-step-num">02</div>
+          <div class="journey-icon">🚐</div>
+          <h4>Pre-Arrival "On My Way" Alert</h4>
+          <p>Your technician will send a notification with their photo, name, and live GPS tracking when they are 20 minutes away from your home.</p>
+        </div>
+
+        <div class="journey-card">
+          <div class="journey-step-num">03</div>
+          <div class="journey-icon">🔧</div>
+          <h4>Upfront Quote &amp; Fast Fix</h4>
+          <p>The tech performs a thorough diagnostic, explains everything clearly with an exact upfront quote, and fixes the issue on the spot.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

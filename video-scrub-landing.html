@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Air — Climate & Thermal Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      pointer-events: none;
+      z-index: -10;
+    }
+  </style>
+</head>
+<body class="selection:bg-white selection:text-black">
+
+  <!-- Scroll Height Track -->
+  <div class="h-[300vh] w-full"></div>
+
+  <!-- Background Video -->
+  <video id="bg-video" muted playsinline preload="auto">
+    <source src="public/video_1_reversed.mp4" type="video/mp4">
+    <source src="https://dl.dropboxusercontent.com/scl/fi/36poffkevs1mggew52f03/video_1_reversed.mp4?rlkey=yk7nqitc61hq39uyjcbw4g0m2&st=w8bjjtlo&dl=1" type="video/mp4">
+  </video>
+
+  <!-- Ambient Dynamic Overlay -->
+  <div class="fixed inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/70 pointer-events-none -z-5"></div>
+
+  <!-- Dynamic Atmospheric Header -->
+  <header class="fixed top-0 left-0 right-0 z-30 p-6 sm:p-10 flex justify-between items-start pointer-events-none">
+    <div class="space-y-1">
+      <p class="text-[11px] uppercase tracking-[0.4em] text-neutral-400 font-medium">
+        Apex Thermal Architecture
+      </p>
+      <p id="state-text" class="text-[10px] uppercase tracking-[0.25em] text-neutral-500 font-mono">
+        Phase I : Thermal Induction
+      </p>
+    </div>
+
+    <!-- Live Climate Sensor Feed -->
+    <div class="text-right space-y-1 font-mono text-[10px] sm:text-[11px] text-neutral-400 tracking-wider">
+      <div class="flex items-center justify-end gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+        <span id="temp-text">74.0°F EQUILIBRIUM</span>
+      </div>
+      <p id="purity-text" class="text-neutral-500">97.5% PURITY</p>
+    </div>
+  </header>
+
+  <!-- Dynamic Phase Timeline -->
+  <aside class="fixed bottom-8 left-6 sm:left-10 z-30 flex items-center gap-4 pointer-events-none font-mono text-xs">
+    <span id="phase-badge" class="text-white font-medium">01</span>
+    <div class="w-16 h-[1px] bg-neutral-800 relative overflow-hidden">
+      <div id="progress-bar" class="h-full bg-white transition-all duration-75 w-0"></div>
+    </div>
+    <span class="text-neutral-600">03</span>
+  </aside>
+
+  <!-- Dynamic Centered Section Cross-Dissolver -->
+  <div class="fixed inset-0 z-20 flex items-center justify-center pointer-events-none px-6 sm:px-12">
+    <!-- Section 1 -->
+    <div id="sec-1" class="absolute max-w-4xl text-center space-y-5 transition-all duration-75 will-change-transform">
+      <p class="text-xs sm:text-sm uppercase tracking-[0.45em] text-neutral-300 font-light">
+        Climate &amp; Thermal Engineering
+      </p>
+      <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light tracking-tight text-white drop-shadow-2xl">
+        Apex Air
+      </h1>
+      <p class="text-base sm:text-xl text-neutral-300 font-light tracking-wide max-w-xl mx-auto pt-2">
+        Invisible comfort. Engineered precision.
+      </p>
+    </div>
+
+    <!-- Section 2 -->
+    <div id="sec-2" class="absolute max-w-4xl text-center space-y-5 transition-all duration-75 will-change-transform opacity-0 invisible">
+      <p class="text-xs sm:text-sm uppercase tracking-[0.45em] text-cyan-300/80 font-light">
+        Atmospheric Dynamics
+      </p>
+      <h2 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-white drop-shadow-2xl">
+        Pure Airflow
+      </h2>
+      <p class="text-base sm:text-xl text-neutral-300 font-light tracking-wide max-w-xl mx-auto pt-2">
+        Laminar ventilation and quiet thermal equilibrium engineered for modern living.
+      </p>
+    </div>
+
+    <!-- Section 3 -->
+    <div id="sec-3" class="absolute max-w-4xl text-center space-y-5 transition-all duration-75 will-change-transform opacity-0 invisible">
+      <p class="text-xs sm:text-sm uppercase tracking-[0.45em] text-orange-300/80 font-light">
+        Enduring Mastery
+      </p>
+      <h2 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-white drop-shadow-2xl">
+        Absolute Balance
+      </h2>
+      <p class="text-base sm:text-xl text-neutral-300 font-light tracking-wide max-w-xl mx-auto pt-2">
+        Sustainable cooling. High-efficiency heating. 24/7 reliability.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const video = document.getElementById('bg-video');
+    const sec1 = document.getElementById('sec-1');
+    const sec2 = document.getElementById('sec-2');
+    const sec3 = document.getElementById('sec-3');
+    const stateText = document.getElementById('state-text');
+    const tempText = document.getElementById('temp-text');
+    const purityText = document.getElementById('purity-text');
+    const phaseBadge = document.getElementById('phase-badge');
+    const progressBar = document.getElementById('progress-bar');
+    
+    video.pause();
+
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let prefersReducedMotion = mediaQuery.matches;
+
+    mediaQuery.addEventListener('change', (e) => {
+      prefersReducedMotion = e.matches;
+      if (prefersReducedMotion) {
+        video.currentTime = 0;
+      }
+    });
+
+    let current = 0;
+    let target = 0;
+    let lastTime = performance.now();
+
+    video.addEventListener('loadedmetadata', () => {
+      video.pause();
+      if (prefersReducedMotion) {
+        video.currentTime = 0;
+      }
+    });
+
+    function render(now) {
+      const dt = Math.min((now - lastTime) / 1000, 0.1);
+      lastTime = now;
+
+      if (!prefersReducedMotion && video.duration && !isNaN(video.duration)) {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const rawProgress = scrollHeight > 0 ? Math.min(Math.max(window.scrollY / scrollHeight, 0), 1) : 0;
+        
+        target = rawProgress * video.duration;
+
+        // Exponential smoothing: current += (target - current) * (1 - Math.exp(-dt * 8))
+        current += (target - current) * (1 - Math.exp(-dt * 8));
+
+        if (Number.isFinite(current)) {
+          const bounded = Math.min(Math.max(current, 0), Math.max(video.duration - 0.001, 0));
+          if (Math.abs(video.currentTime - bounded) > 0.001) {
+            video.currentTime = bounded;
+          }
+
+          const p = bounded / video.duration;
+
+          // Telemetry
+          const temp = (74.0 - p * 4.2).toFixed(1);
+          const airflow = (97.5 + p * 2.4).toFixed(1);
+          tempText.textContent = `${temp}°F EQUILIBRIUM`;
+          purityText.textContent = `${airflow}% PURITY`;
+          progressBar.style.width = `${Math.round(p * 100)}%`;
+
+          if (p < 0.33) {
+            stateText.textContent = 'Phase I : Thermal Induction';
+            phaseBadge.textContent = '01';
+          } else if (p < 0.67) {
+            stateText.textContent = 'Phase II : Laminar Airflow';
+            phaseBadge.textContent = '02';
+          } else {
+            stateText.textContent = 'Phase III : Total Equilibrium';
+            phaseBadge.textContent = '03';
+          }
+
+          // Section 1
+          const s1Opacity = Math.max(0, Math.min(1, 1 - (p / 0.28)));
+          const s1Y = -(p * 80);
+          const s1Scale = 1 - (p * 0.05);
+          sec1.style.opacity = s1Opacity;
+          sec1.style.transform = `translate3d(0, ${s1Y}px, 0) scale(${s1Scale})`;
+          sec1.style.visibility = s1Opacity > 0.01 ? 'visible' : 'hidden';
+
+          // Section 2
+          const s2Dist = Math.abs(p - 0.5);
+          const s2Opacity = Math.max(0, Math.min(1, 1 - (s2Dist / 0.2)));
+          const s2Y = (0.5 - p) * 70;
+          const s2Scale = 0.95 + (s2Opacity * 0.05);
+          sec2.style.opacity = s2Opacity;
+          sec2.style.transform = `translate3d(0, ${s2Y}px, 0) scale(${s2Scale})`;
+          sec2.style.visibility = s2Opacity > 0.01 ? 'visible' : 'hidden';
+
+          // Section 3
+          const s3Opacity = Math.max(0, Math.min(1, (p - 0.68) / 0.24));
+          const s3Y = (1 - p) * 70;
+          const s3Scale = 0.95 + (s3Opacity * 0.05);
+          sec3.style.opacity = s3Opacity;
+          sec3.style.transform = `translate3d(0, ${s3Y}px, 0) scale(${s3Scale})`;
+          sec3.style.visibility = s3Opacity > 0.01 ? 'visible' : 'hidden';
+        }
+      } else if (prefersReducedMotion) {
+        video.currentTime = 0;
+      }
+
+      requestAnimationFrame(render);
+    }
+
+    requestAnimationFrame(render);
+  </script>
+</body>
+</html>

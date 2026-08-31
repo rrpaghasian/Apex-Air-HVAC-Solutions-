@@ -34,12 +34,12 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
           <p className="text-slate-300 max-w-md text-sm">
             Something went wrong while initializing the video engine.
           </p>
-          <a
-            href="https://sites.leadconnectorhq.com/preview/zWn9C136Lu8hSN8Y1Vi8?notrack=true"
-            className="bg-orange-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-orange-600 transition-all text-sm inline-block"
+          <button
+            onClick={() => window.location.reload()}
+            className="bg-orange-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-orange-600 transition-all text-sm cursor-pointer"
           >
-            Go Directly to Funnel Booking →
-          </a>
+            Reload Page ↻
+          </button>
         </div>
       );
     }

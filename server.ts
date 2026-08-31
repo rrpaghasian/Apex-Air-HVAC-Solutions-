@@ -11,8 +11,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const isProd = process.env.NODE_ENV === 'production';
 
+app.use((req, _res, next) => {
+  console.log(`[REQ] ${req.method} ${req.url} (Host: ${req.headers.host})`);
+  next();
+});
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // 1. Dynamic Server-Side Content API with Real HVAC Data & Funnel CTAs
 app.get('/api/content', (_req, res) => {
@@ -117,10 +122,6 @@ app.get('/api/content', (_req, res) => {
           label: 'Get Started & Book Online →',
           action: 'open-booking',
           promoCode: 'ONLINE25'
-        },
-        secondaryCta: {
-          label: 'Export GHL Funnel Code',
-          action: 'open-ghl'
         }
       }
     ]
@@ -208,7 +209,11 @@ async function startServer() {
   if (!isProd) {
     const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: {
+        middlewareMode: true,
+        allowedHosts: true,
+        cors: true
+      },
       appType: 'spa'
     });
     app.use(vite.middlewares);
@@ -220,7 +225,7 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, () => {
+  app.listen(Number(PORT), '0.0.0.0', () => {
     console.log(`\n🚀 Apex Air Dynamic Server running on http://localhost:${PORT}`);
     console.log(`📊 Climate Telemetry API: http://localhost:${PORT}/api/telemetry`);
     console.log(`🎬 Dynamic Video Stream: http://localhost:${PORT}/api/stream/video\n`);

@@ -102,10 +102,6 @@ const DEFAULT_CONTENT: SiteContentResponse = {
         label: 'Get Started & Book Online →',
         action: 'open-booking',
         promoCode: 'ONLINE25'
-      },
-      secondaryCta: {
-        label: 'Export GHL Funnel Code',
-        action: 'open-ghl'
       }
     }
   ]

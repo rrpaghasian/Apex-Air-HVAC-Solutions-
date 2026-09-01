@@ -602,13 +602,54 @@
       right: 0;
       background: #ffffff;
       border-top: 1px solid var(--gray-200);
-      padding: 10px 16px;
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
       z-index: 999;
       box-shadow: 0 -4px 16px rgba(0,0,0,0.1);
       gap: 10px;
     }
     @media (max-width: 768px) {
       .mobile-sticky-bar { display: flex; }
+      .ghl-topbar .container {
+        justify-content: space-between;
+        align-items: center;
+      }
+      .ghl-topbar-desktop-only {
+        display: none !important;
+      }
+      .ghl-nav {
+        height: 64px;
+      }
+      .brand-logo .brand-icon-box {
+        width: 36px;
+        height: 36px;
+      }
+      .brand-name {
+        font-size: 1.2rem;
+      }
+      .funnel-hero-sub {
+        font-size: 0.95rem;
+      }
+      .booking-main-section {
+        padding: 24px 0 50px;
+      }
+      .calendar-card-header {
+        padding: 14px 16px;
+      }
+      .calendar-embed-frame-wrap {
+        padding: 12px;
+      }
+      .sidebar-card {
+        padding: 18px 16px;
+      }
+      .emergency-call-card {
+        padding: 20px 16px;
+      }
+      .journey-section {
+        padding: 40px 0;
+      }
+      .journey-grid {
+        grid-template-columns: 1fr !important;
+      }
     }
     .mobile-sticky-bar a {
       flex: 1;
@@ -633,11 +674,11 @@
           <span class="pulse-dot"></span>
           Live Dispatch
         </span>
-        <span style="color: #cbd5e1; font-weight: 600;">Technicians available in Buford &amp; Hall County today.</span>
+        <span class="ghl-topbar-desktop-only" style="color: #cbd5e1; font-weight: 600;">Technicians available in Buford &amp; Hall County today.</span>
       </div>
 
       <div class="flex items-center gap-4">
-        <span>⏰ 24/7 Immediate Help:</span>
+        <span class="ghl-topbar-desktop-only">⏰ 24/7 Immediate Help:</span>
         <a href="tel:7709677910" style="color: #ffffff; font-weight: 900; white-space: nowrap;">📞 (770) 967-7910</a>
       </div>
     </div>
